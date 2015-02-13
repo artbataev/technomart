@@ -35,7 +35,8 @@ body
     background: #ffffff;
 
     // background: url('../technomart-index.jpg') center top;
-    // opacity: 0.3;
+    // background: url('../technomart-catalog.jpg') center top;
+    // opacity: 0.7;
 }
 
 
@@ -251,49 +252,53 @@ body
     font-size: 16px;
     line-height: 18px;
     font-family: 'Cuprum', sans-serif;
-    padding-top: 45px;
-    padding-bottom: 45px;
+    padding-top: 38px;
+    padding-bottom: 30px;
 }
 
 .nav-footer-about {
     float: left;
-    width: 300px;
+    width: 250px;
 }
 
 .footer-logo
 {
     display: inline-block;
     text-transform: uppercase;
-    font-size: 24px;
-    line-height: 26px;
+    font-size: 30px;
+    line-height: 62px;
     // letter-spacing: 0.7pt;
     background-color: #ee3643;
     color: white;
-    padding-top: 10px;
-    padding-bottom: 6px;
-    padding-left: 55px;
-    padding-right: 55px;
+    padding-left: 40px;
+    padding-right: 40px;
     box-shadow: 0 5px 0 0 #b52933;
-    margin-bottom: 20px;
+    margin-bottom: 33px;
+}
+
+.footer-contacts {
+    margin-left: 5px;
 }
 
 .nav-footer-menu {
     float: right;
     text-align: right;
-    width: 550px;
+    width: 650px;
     ul {
         list-style: none;
         margin: 0;
         padding: 0;
         font-size: 0;
+        margin-top: 40px;
     }
     li {
         margin: 0;
         padding: 0;
         font-size: 18px;
+        line-height: 18px;
         display: inline-block;
         vertical-align: top;
-        padding-left: 40px;
+        padding-left: 55px;
     }
     a {
         text-decoration: none;
@@ -315,10 +320,73 @@ body
 
 .footer-copyright,
 .footer-social,
-.footer-feedback,
-.footer-author{
+.footer-block-link{
     float: left;
 }
+
+.footer-copyright {
+    width: 320px;
+}
+
+.footer-block-link{
+    margin-left: 65px;
+    a {
+        text-decoration: none;
+        color: #ffd180;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+.footer-social {
+    float: left;
+    text-align: center;
+    p {
+        margin: 0;
+        margin-bottom: 15px;
+    }
+}
+
+
+.social-btn {
+    margin: 0 2px;
+    display: inline-block;
+    vertical-align: top;
+    width: 43px;
+    height: 43px;
+    font-size: 18px;
+    line-height: 43px;
+    text-decoration: none;
+    background: #212a3a;
+    color: white;
+    border-radius: 50%;
+    &:hover, 
+    &:active {
+        background-color: #ee3643;
+    }
+
+    &-vk {
+        background-position: -322px 12px;
+        &:hover {
+            background-position: -268px 12px;
+        }
+    }
+    &-fb {
+        background-position: -220px 10px;
+        &:hover {
+            background-position: -177px 10px;
+        }
+    }
+    &-inst {
+        background-position: -129px 10px;
+        &:hover {
+            background-position: -78px 10px;
+        }
+    }
+}
+
 
 /*-----  End of $Footer  ------*/
 
@@ -341,7 +409,7 @@ body
 .catalog-items {
     float: right;
     width: 720px;
-    margin: 20px auto;
+    margin: 0 auto;
 }
 
 .catalog-item {
@@ -479,6 +547,10 @@ body
     padding-bottom: 85px;
 }
 
+.promo-blocks {
+    margin-bottom: 33px;
+}
+
 .promo-block
 {
     width: 275px;
@@ -532,25 +604,33 @@ body
 }
 
 .popular-section {
-    margin-top: 10px;
+    margin-top: 20px;
 
     &-heading {
         background: #f7f3ec;
-        padding: 30px 30px;
-        margin-bottom: 20px;
+        padding: 25px 30px;
+        padding-right: 0px;
+        margin-bottom: 18px;
+        font-size: 0px;
         h2 {
             font-family: 'Cuprum', sans-serif;
             font-size: 30px;
-            line-height: 30px;
+            line-height: 40px;
             text-transform: uppercase;
             font-weight: normal;
-            width: 600px;
+            width: 634px;
             display: inline-block;
             margin: 0;
             padding: 0;
         }
         .btn-nav {
-            
+            border-radius: 2px;
+            width: 187px;
+            text-align: center;
+            font-size: 14px;
+            line-height: 18px;
+            padding-top: 10px;
+            padding-bottom: 10px;
         }
     }
 
@@ -601,7 +681,120 @@ body
 }
 
 
+/*================================
+=            $Каталог            =
+================================*/
 
+.breadcrumbs {
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        display: inline;
+        padding-right: 35px;
+        position: relative;
+
+        &:after {
+            content: "";
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            top: 3px;
+            right: 15px;
+            background: #000000;
+        }
+
+        &:last-child:after {
+            display: none;
+        }     
+    }
+
+    a,
+    span {
+        text-decoration: none;
+        color: #000000;
+        text-transform: uppercase;  
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+.catalog-products {
+    margin-bottom: 60px;
+    h1 {
+        background: #f2f6f8;
+        color: #32425c;
+        font-family: 'Cuprum', sans-serif;
+        font-size: 30px;
+        font-weight: normal;
+        text-transform: uppercase;
+        line-height: 30px;
+        padding: 35px 30px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+}
+
+
+.catalog-pagination {
+    list-style: none;
+    margin: 0;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 0;
+    display: block;
+
+    li {
+        display: inline-block;
+        font-size: 13px;
+        line-height: 18px;
+        margin-right: 5px;
+        padding: 0;
+    }
+
+    a,
+    span {
+        display: inline-block;
+        vertical-align: top;
+        height: 45px;
+        line-height: 45px;
+        padding: 0 18px;
+        border-radius: 2px;
+        text-transform: uppercase;
+    }
+
+    a {
+        background: #ffffff;
+        color: #000000;
+        text-decoration: none;
+        border: 1px solid #e5e5e5;
+        &:hover,
+        &:active {
+            border: 1px solid #ee3643;
+        }
+    }
+
+    span {
+        background: #ee3643;
+        border: 1px solid #ee3643;
+    }
+}
+
+.description-catalog-page {
+    background: #f2f6f8;
+    padding-top: 45px;
+    padding-bottom: 55px;
+    h2 {
+        font-size: 30px;
+        text-transform: uppercase;
+        font-weight: normal;
+        margin-bottom: 30px;
+    }
+}
 
 
 
