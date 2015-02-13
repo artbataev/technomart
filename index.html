@@ -3,9 +3,11 @@
     <head>
         <meta charset="utf-8">
         <title>Техномарт</title>
+        <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Cuprum:400,700&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/style.css">
     </head>
-    <body class="body-test body-test-index">
+    <body>
         <header class="main-header">
             <div class="header-top">
                 <div class="container clearfix">
@@ -21,19 +23,21 @@
                     <a href="#" class="header-checkout">Оформить заказ</a>
                 </div>
             </div>
-            <div class="container clearfix">
-                <div class="description-block">
-                    Интернет-магазин<br>
-                    строительных материалов<br>
-                    и инструментов для ремонта
-                </div>
-                <div class="address-block">
-                    <div class="phone">+7 (495) 555-05-55</div>
-                    <div class="address">Москва, ул. Строителей, д.15</div>
-                </div>
-                <div class="user-block">
-                    <a href="#" class="btn login">Войти</a>
-                    <a href="#" class="btn register">Регистрация</a>
+            <div class="header-info">
+                <div class="container clearfix">
+                    <div class="description-block">
+                        Интернет-магазин<br>
+                        строительных материалов<br>
+                        и инструментов для ремонта
+                    </div>
+                    <div class="address-block">
+                        <div class="phone">+7 (495) 555-05-55</div>
+                        <div class="address">Москва, ул. Строителей, д.15</div>
+                    </div>
+                    <div class="user-block">
+                        <a href="#" class="btn btn-login">Войти</a>
+                        <a href="#" class="btn btn-register">Регистрация</a>
+                    </div>
                 </div>
             </div>
             <div class="container clearfix">
@@ -84,7 +88,7 @@
                                 <div class="promo-description">Соседям на радость</div>
                             </div>
                             <div class="promo-image">
-                                <img src="http://placehold.it/620x270" alt="Чувак с дрелью">
+                                <img src="http://placehold.it/620x265" alt="Чувак с дрелью">
                             </div>
                             <div class="promo-slider-link">
                                 <a href="#" class="btn btn-nav">Открыть каталог</a>
@@ -114,111 +118,114 @@
                 </section>
             </div>
             <div class="container clearfix">
-                <section class="popular popular-products">
-                    <div class="index-section-heading">
+                <section class="popular-section">
+                    <div class="popular-section-heading">
                         <h2>Популярные товары:</h2>
                         <a href="#" class="btn btn-nav">Все популярные товары</a>
                     </div>
-                    <div class="products">
-                        <div class="product">
-                            <img src="http://placehold.it/210x170" alt="Bosh BFG 9000">
-                            <div class="product-name">
-                                Перфоратор Bosch BFG 9000
+                    <div class="popular-section-box">
+                        <div class="catalog-item">
+                            <div class="catalog-item-actions">
+                                <a href="#" class="btn-buy">Купить</a>
+                                <a href="#" class="bookmark">В закладки</a>
                             </div>
-                            <div class="old-price">
-                                32 500 р.
+                            <div class="catalog-item-image">
+                                <img width="218" height="168" src="img/img-catalog-item-1.jpg" alt="Перфоратор">
                             </div>
-                            <div class="price">
-                                25 500 р.
-                            </div>
-                            <!-- блок кнопок? -->
+                            <div class="catalog-item-title">Перфоратор BOSCH BFG 9000</div>
+                            <div class="catalog-item-discount">32 500 р.</div>
+                            <div class="catalog-item-price">25 500 р.</div>
                         </div>
-                        <div class="product">
-                            <img src="http://placehold.it/210x170" alt="Bosh BFG 3000">
-                            <div class="product-name">
-                                Перфоратор Bosch BFG 3000
+                        <div class="catalog-item">
+                            <div class="catalog-item-actions">
+                                <a href="#" class="btn-buy">Купить</a>
+                                <a href="#" class="bookmark">В закладки</a>
                             </div>
-                            <div class="old-price">
-                                22 500 р.
+                            <div class="catalog-item-image">
+                                <img width="218" height="168" src="img/img-catalog-item-1.jpg" alt="Перфоратор">
                             </div>
-                            <div class="price">
-                                15 500 р.
-                            </div>
+                            <div class="catalog-item-title">Перфоратор BOSCH BFG 3000</div>
+                            <div class="catalog-item-discount">22 500 р.</div>
+                            <div class="catalog-item-price">15 500 р.</div>
                         </div>
-                        <div class="product">
-                            <img src="http://placehold.it/210x170" alt="Bosh BFG 6000">
-                            <div class="product-name">
-                                Перфоратор Bosch BFG 6000
+                        <div class="catalog-item">
+                            <div class="catalog-item-actions">
+                                <a href="#" class="btn-buy">Купить</a>
+                                <a href="#" class="bookmark">В закладки</a>
                             </div>
-                            <div class="old-price">
-                                30 500 р.
+                            <div class="catalog-item-image">
+                                <img width="218" height="168" src="img/img-catalog-item-1.jpg" alt="Перфоратор">
                             </div>
-                            <div class="price">
-                                25 500 р.
-                            </div>
+                            <div class="catalog-item-title">Перфоратор BOSCH BFG 6000</div>
+                            <div class="catalog-item-discount">30 500 р.</div>
+                            <div class="catalog-item-price">25 500 р.</div>
                         </div>
-                        <div class="product new">
-                            <img src="http://placehold.it/210x170" alt="Bosh BFG 2000">
-                            <div class="product-name">
-                                Перфоратор Bosch BFG 2000
+                        <div class="catalog-item">
+                            <div class="flag flag-new">новинка</div>
+                            <div class="catalog-item-actions">
+                                <a href="#" class="btn-buy">Купить</a>
+                                <a href="#" class="bookmark">В закладки</a>
                             </div>
-                            <div class="price">
-                                12 500 р.
+                            <div class="catalog-item-image">
+                                <img width="218" height="168" src="img/img-catalog-item-1.jpg" alt="Перфоратор">
                             </div>
+                            <div class="catalog-item-title">Перфоратор BOSCH BFG 2000</div>
+                            <div class="catalog-item-discount"></div>
+                            <div class="catalog-item-price">12 500 р.</div>
                         </div>
                     </div>
                 </section>
             </div>
             <div class="container clearfix">
-                <section class="popular popular-manufacturers">
-                    <div class="index-section-heading">
+                <section class="popular-section">
+                    <div class="popular-section-heading">
                         <h2>Популярные производители:</h2>
                         <a href="#" class="btn btn-nav">Все производители</a>
                     </div>
-                    <div class="manufacturers">
-                        <a class="manufacturer" href="#">
-                            <img src="http://placehold.it/220x100" alt="Bosch">
+                    <div class="popular-section-box">
+                        <a class="popular-item-manufacturer" href="#">
+                            <img src="img/img-man-bosch.png" alt="Bosch">
                         </a>
-                        <a class="manufacturer" href="#">
-                            <img src="http://placehold.it/220x100" alt="Makita">
+                        <a class="popular-item-manufacturer" href="#">
+                            <img src="img/img-man-makita.png" height="40" width="123" alt="Makita">
                         </a>
-                        <a class="manufacturer" href="#">
-                            <img src="http://placehold.it/220x100" alt="DeWalt">
+                        <a class="popular-item-manufacturer" href="#">
+                            <img src="img/img-man-dewalt.png" alt="DeWalt">
                         </a>
-                        <a class="manufacturer" href="#">
-                            <img src="http://placehold.it/220x100" alt="Интерскол">
+                        <a class="popular-item-manufacturer" href="#">
+                            <img src="img/img-man-interskol.png" height="88" width="200" alt="Интерскол">
                         </a>
-                        <a class="manufacturer" href="#">
-                            <img src="http://placehold.it/220x100" alt="Hitachi">
+                        <a class="popular-item-manufacturer" href="#">
+                            <img src="img/img-man-hitachi.png" alt="Hitachi">
                         </a>
-                        <a class="manufacturer" href="#">
-                            <img src="http://placehold.it/220x100" alt="LG">
+                        <a class="popular-item-manufacturer" href="#">
+                            <img src="img/img-man-lg.png" alt="LG">
                         </a>
-                        <a class="manufacturer" href="#">
-                            <img src="http://placehold.it/220x100" alt="AEG Power Solutions">
+                        <a class="popular-item-manufacturer" href="#">
+                            <img src="img/img-man-aeg.png" alt="AEG Power Solutions">
                         </a>
-                        <a class="manufacturer" href="#">
-                            <img src="http://placehold.it/220x100" alt="Metabo">
+                        <a class="popular-item-manufacturer" href="#">
+                            <img src="img/img-man-metabo.png" alt="Metabo">
                         </a>
                     </div>
                 </section>
             </div>
         </main>
 
-        <section class="services">
+        <section class="index-services">
             <div class="container clearfix">
                 <h2>Сервисы</h2>
                 Хороший интернет-магазин отличается от плохого не только ценами!<br>
                 Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
-                <div class="services-all">
-                    <div class="services-list">
+                <div class="index-services-all">
+                    <div class="index-services-list">
                         <ul>
                             <li class="active">Доставка</li>
                             <li>Гарантия</li>
                             <li>Кредит</li>
                         </ul>
                     </div>
-                    <div class=" services-details">
+                    <div class="index-services-details">
                         <div class="service-details service-details-delivery"> <!-- фоновый рисунок меняется -->
                             <h3>Доставка</h3>
                             Мы с удовольствием доставим ваш товар прямо<br>
@@ -264,10 +271,19 @@
         </section>
         <footer class="nav-footer">
             <div class="container clearfix">
-                <div class="footer-logo">
-                    <img src="http://placehold.it/200x50" alt="Техномарт">
+                <div class="nav-footer-about" itemscope itemtype="http://schema.org/Organization">
+                    <div itemprop="name" class="footer-logo">
+                            Техномарт
+                    </div>
+                    <div class="footer-contacts">
+                        <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                            <span itemprop="addressLocality">г. Москва</span>, 
+                            <span itemprop="streetAddress">ул. Строителей, 15</span>
+                        </div>
+                        <span itemprop="telephone">+7 (495) 555-05-55</span>
+                    </div>
                 </div>
-                <div class="footer-menu footer-menu-general">
+                <div class="nav-footer-menu nav-footer-menu-general">
                     <ul>
                         <li><a href="#">Компания</a></li>
                         <li><a href="#">Новости</a></li>
@@ -276,11 +292,7 @@
                         <li><a href="#">Контакты</a></li>
                     </ul>
                 </div>
-                <div class="footer-contacts">
-                    г. Москва, ул. Строителей, 15 <br>
-                    +7 (495) 555-05-55
-                </div>
-                <div class="footer-menu footer-menu-content">
+                <div class="nav-footer-menu nav-footer-menu-content">
                     <ul>
                         <li><a href="#">Материалы</a></li>
                         <li><a href="#">Техника</a></li>

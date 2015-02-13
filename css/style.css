@@ -4,59 +4,35 @@
 /**
 *
 * Содержание
-* Отладочная информация
 * Общие стили
 * Header
+* Footer
 * Промо-блок
 * Популярное
 * Сервисы
 * О компании
-* Footer
 **/
 body {
-  min-width: 940px;
+  min-width: 960px;
   margin: 0;
   padding: 0;
   background-color: white;
   background-repeat: no-repeat;
   background-position: center top;
   background-size: 1200px auto;
+  font-size: 13px;
+  line-height: 24px;
+  font-family: "PT Sans", sans-serif;
+  color: #000000;
+  background: #ffffff;
 }
-/*==============================================
-=            $Отладочная информация            =
-==============================================
-
-.body-test
-{
-    background-color: white;
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: 1200px auto;
-}
-
-.body-test-index
-{
-    background-image: url('technomart-index.jpg');
-}
-
-div,
-section,
-nav,
-main,
-footer,
-header
-{
-    border: 1px dashed red;
-    background: rgba(255, 255, 0, .5);
-}
-
 /*====================================
 =            $Общие стили            =
 ====================================*/
 .clearfix:after {
+  content: "";
   display: table;
   clear: both;
-  content: "";
 }
 .container {
   width: 940px;
@@ -64,10 +40,12 @@ header
 }
 .btn {
   display: inline-block;
+  vertical-align: top;
   padding: 12px 33px;
+  text-decoration: none;
+  font-family: 'Cuprum', sans-serif;
 }
 .btn-nav {
-  text-decoration: none;
   text-transform: uppercase;
   color: white;
   background-color: red;
@@ -76,8 +54,9 @@ header
 =            $Header            =
 ===============================*/
 .main-header {
+  padding-bottom: 62px;
+  font-family: 'Cuprum', sans-serif;
   background-color: #f1f5f7;
-  padding-bottom: 60px;
 }
 .header-top {
   background-color: #293449;
@@ -87,144 +66,419 @@ header
 .header-logo {
   display: inline-block;
   text-transform: uppercase;
+  font-size: 24px;
+  line-height: 26px;
   background-color: #ee3643;
   color: white;
-  padding: 12px 52px;
+  padding-top: 10px;
+  padding-bottom: 6px;
+  padding-left: 55px;
+  padding-right: 55px;
+  box-shadow: 0 5px 0 0 #b52933;
 }
 .header-search,
 .header-wishlist,
 .header-cart,
 .header-checkout {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
+  font-size: 17px;
+  line-height: 18px;
+  padding: 12px 21px;
+  text-decoration: none;
+  color: #ffffff;
+}
+.header-checkout {
+  background: #63a63e;
+  float: right;
+}
+.header-info {
+  margin-top: 45px;
+  margin-bottom: 40px;
 }
 .description-block,
 .address-block {
   float: left;
-  width: 300px;
+  width: 270px;
 }
 .description-block {
-  padding: 50px;
+  font-size: 16px;
+  line-height: 23px;
+  font-style: italic;
+  color: #ee3643;
+  padding-left: 52px;
+  padding-top: 3px;
+}
+.address-block .phone {
+  font-size: 21px;
+  color: #e9292a;
+  border: 3px solid white;
+  padding-top: 7px;
+  padding-bottom: 8px;
+  padding-left: 40px;
+  width: 170px;
+  position: relative;
+}
+.address-block .phone:before {
+  content: "A";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #b7bfc8;
+}
+.address-block .address {
+  font-size: 16px;
+  line-height: 18px;
+  color: #32425c;
+  padding-top: 7px;
+  padding-left: 15px;
 }
 .user-block {
   float: right;
 }
+.btn-login,
+.btn-register {
+  color: black;
+  font-size: 21px;
+  background: white;
+  margin-left: 10px;
+}
 .main-menu {
   display: block;
   background-color: #32425c;
+  box-shadow: 0 3px 0 0 #293449;
 }
 .main-menu ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  padding-left: 22px;
+  font-size: 0;
 }
 .main-menu li {
   display: inline-block;
+  padding: 0;
+  margin: 0;
 }
 .main-menu a {
   color: white;
+  font-size: 17px;
+  line-height: 17px;
   text-decoration: none;
   padding: 20px 30px;
   display: block;
 }
-/*=====================================
-=            $Главный блок            =
-=====================================*/
+.main-menu a:hover {
+  background: #293449;
+}
+/*-----  End of $Header  ------*/
+/*===============================
+=            $Footer            =
+===============================*/
+.nav-footer {
+  background: #32425c;
+  color: white;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: 'Cuprum', sans-serif;
+  padding-bottom: 50px;
+}
+.main-footer {
+  background: #293449;
+  color: white;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: 'Cuprum', sans-serif;
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+.nav-footer-about {
+  float: left;
+  width: 300px;
+}
+.footer-logo {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 26px;
+  background-color: #ee3643;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 6px;
+  padding-left: 55px;
+  padding-right: 55px;
+  box-shadow: 0 5px 0 0 #b52933;
+  margin-bottom: 20px;
+}
+.nav-footer-menu {
+  float: right;
+  text-align: right;
+  width: 550px;
+}
+.nav-footer-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+.nav-footer-menu li {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 40px;
+}
+.nav-footer-menu a {
+  text-decoration: none;
+}
+.nav-footer-menu a:hover {
+  text-decoration: underline;
+}
+.nav-footer-menu a:active {
+  text-decoration: none;
+}
+.nav-footer-menu-general a {
+  color: white;
+}
+.nav-footer-menu-content a {
+  color: #ffd180;
+}
+.footer-copyright,
+.footer-social,
+.footer-feedback,
+.footer-author {
+  float: left;
+}
+/*-----  End of $Footer  ------*/
+/*========================================
+=            $Каталог товаров            =
+========================================*/
+.catalog-items {
+  font-size: 0;
+}
+.catalog-item {
+  font-size: 18px;
+}
+.catalog-items {
+  float: right;
+  width: 720px;
+  margin: 20px auto;
+}
+.catalog-item {
+  position: relative;
+  width: 218px;
+  display: inline-block;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #e5e5e5;
+  font-weight: bold;
+  line-height: 20px;
+  text-align: center;
+}
+.catalog-item-item-image {
+  width: 218px;
+  height: 168px;
+}
+.catalog-item-item-image img {
+  width: 218px;
+  height: 168px;
+}
+.catalog-item .flag {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 60px;
+  height: 60px;
+  text-indent: -1000px;
+  overflow: hidden;
+  z-index: 20;
+}
+.catalog-item .flag-new {
+  background: url("../img/bg-flag-new.png") no-repeat 0 0;
+}
+.catalog-item-actions {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 218px;
+  height: 88px;
+  padding: 40px 0;
+  background-color: #ffffff;
+  z-index: 10;
+}
+.catalog-item-actions .btn-buy,
+.catalog-item-actions .bookmark {
+  display: block;
+  width: 129px;
+  margin: 0 auto;
+  margin-bottom: 7px;
+  padding: 7px 0;
+  border: 3px solid #63a63e;
+  border-bottom-color: #367315;
+  border-radius: 3px;
+  background-color: #63a63e;
+  color: white;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: normal;
+  font-family: "Cuprum", sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.catalog-item-actions .bookmark {
+  color: #32425c;
+  background: white;
+  border-bottom-color: #63a63e;
+}
+.catalog-item-actions {
+  display: none;
+}
+.catalog-item:hover {
+  box-shadow: 0 0 25px 10px rgba(41, 52, 73, 0.5);
+}
+.catalog-item:hover .catalog-item-actions {
+  display: block;
+}
+.catalog-item-title {
+  min-height: 40px;
+  padding: 0 25px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+.catalog-item-discount {
+  min-height: 20px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: #999999;
+  text-decoration: line-through;
+  text-transform: uppercase;
+}
+.catalog-item-price {
+  position: relative;
+  width: 80px;
+  margin: 10px auto;
+  margin-bottom: 20px;
+  padding: 10px 30px;
+  color: white;
+  background: #ee3643;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+.catalog-item-price:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -20px;
+  width: 0;
+  height: 0;
+  border: 20px solid #ffffff;
+  border-left-color: #ee3643;
+}
+/*-----  End of $Каталог товаров  ------*/
+/*=================================
+=            $Главная            =
+==================================*/
 .index-content {
   padding-top: 60px;
   padding-bottom: 85px;
 }
-/*===================================
-=            $Промо-блок            =
-===================================*/
 .promo-block {
   width: 275px;
-  height: 95px;
+  height: 98px;
   padding-left: 25px;
   padding-top: 25px;
+  margin-bottom: 20px;
 }
 .promo-block-materials {
-  background-color: #f6b22d;
+  background: #f6b22d;
+  float: left;
+  margin-right: 20px;
 }
 .promo-block-instrument {
-  background-color: #4aafde;
+  background: #4aafde;
+  float: left;
+  margin-right: 20px;
 }
 .promo-block-tech {
-  background-color: #cc79d1;
+  background: #cc79d1;
+  float: right;
 }
-.promo-block-materials,
-.promo-block-instrument {
-  float: left;
+.promo-block-sales {
+  background: #85d179;
+  float: right;
+}
+.promo-block-delivery {
+  background: #f6b22d;
+  float: right;
 }
 .promo-slider {
   float: left;
   position: relative;
-  width: 600px;
+  width: 620px;
+  height: 265px;
 }
 .promo-slider-heading {
   position: absolute;
   top: 10px;
   left: 10px;
 }
-.promo-block-tech,
-.promo-block-sales,
-.promo-block-delivery {
-  float: right;
+.promo-slider-nav,
+.promo-slider-link {
+  display: none;
 }
-/*===================================
-=            $Популярное            =
-===================================*/
-.popular h2 {
-  display: inline-block;
+.popular-section {
+  margin-top: 10px;
 }
-.product {
+.popular-section-heading {
+  background: #f7f3ec;
+  padding: 30px 30px;
+  margin-bottom: 20px;
+}
+.popular-section-heading h2 {
+  font-family: 'Cuprum', sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  font-weight: normal;
+  width: 600px;
   display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+.popular-section-box {
+  margin-left: -20px;
+  font-size: 0;
+}
+.popular-item-manufacturer {
+  width: 218px;
+  height: 143px;
+  display: inline-block;
+  text-align: center;
   vertical-align: top;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #e5e5e5;
 }
-/*================================
-=            $Сервисы            =
-================================*/
-.services {
-  background-color: #f2f6f8;
+.popular-item-manufacturer:hover {
+  box-shadow: 0 0 25px 10px rgba(41, 52, 73, 0.5);
+}
+.index-services {
+  background: #f2f6f8;
   padding-top: 65px;
   padding-bottom: 100px;
 }
-.services-list,
-.services-details {
-  display: inline-block;
+.company-info {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
-/*===================================
-=            $О компании            =
-===================================*/
 .company-info-description,
 .company-info-contacts {
-  display: inline-block;
-  vertical-align: top;
+  float: left;
 }
 .company-info-description {
   width: 550px;
 }
 .company-info-contacts {
-  width: 350px;
-}
-/*===============================
-=            $Footer            =
-===============================*/
-.footer-logo,
-.footer-contacts {
-  float: left;
-}
-.footer-menu {
-  float: right;
-}
-.footer-menu li {
-  display: inline-block;
-}
-.footer-copyright,
-.footer-social {
-  float: left;
-}
-.footer-feedback,
-.footer-author {
-  float: right;
+  width: 300px;
 }
