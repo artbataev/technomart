@@ -14,7 +14,7 @@
                     <div class="header-logo">
                         Техномарт
                     </div>
-                    <form class="header-search" action="/search" method="get">
+                    <form class="header-search" action="" method="get">
                         <label>Поиск: <input type="search" name="q"></label>
                         <input type="submit">
                     </form>
@@ -58,7 +58,7 @@
             <div class="container clearfix">
                 <div class="breadcrumbs">
                     <ul>
-                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="index.html"><i class="icon-home"></i></a></li>
                         <li><a href="#">Каталог</a></li>
                         <li><a href="#">Инструмент</a></li>
                         <li><span>Перфораторы</span></li>
@@ -69,8 +69,73 @@
                 <div class="container clearfix">
                     <h1>Перфораторы</h1>
                     <div class="catalog-filter">
+                        <div class="heading-filter">
+                            Фильтр:
+                        </div>
+                        <form action="" method="post">
+                            <div class="filter-block">
+                                <div class="filter-block-heading">Цена:</div>
+                                    <div class="range-filter">
+                                        <div class="range-controls">
+                                            <div class="scale">
+                                                <div style="width:130px;" class="bar"></div>
+                                            </div>
+                                            <div class="toggle min-toggle"></div>
+                                            <div class="toggle max-toggle"></div>
+                                        </div>
+                                        <div class="price-controls clearfix">
+                                            <input class="price-controls-min" type="text" name="min-price" value="0">
+                                            &mdash;
+                                            <input class="price-controls-max" type="text" name="max-price" value="30 000">
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="filter-block">
+                                <div class="filter-block-heading">Производители:</div>
+                                <input type="checkbox" id="man-1" name="manufacturer" value="1" checked>
+                                <label for="man-1">
+                                    Bosch
+                                </label>
+                                <input type="checkbox" id="man-2" name="manufacturer" value="2">
+                                <label for="man-2">
+                                    Интерскол
+                                </label>
+                                <input type="checkbox" id="man-3" name="manufacturer" value="3" checked>
+                                <label for="man-3">
+                                    Makita
+                                </label>
+                                <input type="checkbox" id="man-4" name="manufacturer" value="4">
+                                <label for="man-4">
+                                    Dewalt
+                                </label>
+                                <input type="checkbox" id="man-5" name="manufacturer" value="5">
+                                <label for="man-5">
+                                    Hitachi
+                                </label>
+                            </div>
+                            <div class="filter-block">
+                                <div class="filter-block-heading">Питание:</div>
+                                <input type="radio" id="power-1" name="product-power" value="1" checked>
+                                <label for="power-1">
+                                    Акуумуляторные
+                                </label>
+                                <input type="radio" id="power-2" name="product-power" value="2">
+                                <label for="power-2">
+                                    Сетевые
+                                </label>
+                            </div>
+                            <button class="btn" type="submit">Показать</button>
+                        </form>
                     </div>
                     <div class="catalog-items">
+                        <div class="heading-filter heading-filter-sort">
+                            Сортировка:
+                            <span>По цене</span>
+                            <a href="#">По типу</a>
+                            <a href="#">По функционалу</a>
+                            <span class="heading-filter-sort-up">Вверх</span>
+                            <a href="#" class="heading-filter-sort-doun">Вниз</a>
+                        </div>
                         <div class="catalog-item">
                             <div class="catalog-item-actions">
                                 <a href="#" class="btn-buy">Купить</a>
@@ -245,9 +310,9 @@
                     Все права защищены.
                 </div>
                 <section class="footer-social">
-                    <a href="#" class="social-btn social-btn-vk">В</a>
-                    <a href="#" class="social-btn social-btn-fb">Ф</a>
-                    <a href="#" class="social-btn social-btn-inst">И</a>
+                    <a href="#" class="social-btn social-btn-vk"><i class="icon-instagramm"></i></a>
+                    <a href="#" class="social-btn social-btn-fb"><i class="icon-facebook"></i></a>
+                    <a href="#" class="social-btn social-btn-inst"><i class="icon-vk"></i></a>
                 </section>
                 <section class="footer-block-link">
                     Обратная связь:<br>
