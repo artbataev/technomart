@@ -171,6 +171,7 @@ body {
   padding: 12px 33px;
   text-decoration: none;
   font-family: 'Cuprum', sans-serif;
+  text-align: center;
 }
 .btn-nav {
   text-transform: uppercase;
@@ -178,7 +179,6 @@ body {
   background-color: #ee3643;
   border-radius: 2px;
   width: 187px;
-  text-align: center;
   font-size: 14px;
   line-height: 24px;
   padding-top: 9px;
@@ -596,10 +596,10 @@ body {
   margin-bottom: 33px;
 }
 .promo-block {
-  width: 275px;
-  height: 98px;
-  padding-left: 25px;
-  padding-top: 25px;
+  width: 278px;
+  height: 101px;
+  padding-left: 22px;
+  padding-top: 22px;
   margin-bottom: 20px;
   position: relative;
   color: white;
@@ -607,6 +607,9 @@ body {
   font-size: 24px;
   line-height: 30px;
   font-family: 'Cuprum', sans-serif;
+}
+.promo-block-heading {
+  margin-bottom: 12px;
 }
 .promo-block-materials {
   background: #f6b22d url('../img/icon-materials.png') no-repeat 80% center;
@@ -645,6 +648,9 @@ body {
 }
 .promo-block .promo-block-btn {
   text-transform: uppercase;
+  padding: 10px 15px;
+  width: 105px;
+  margin-left: 2px;
   font-size: 14px;
   font-weight: normal;
   line-height: 18px;
@@ -760,9 +766,22 @@ body {
 .company-info-description {
   width: 540px;
 }
+.company-info-description .btn-nav {
+  padding-left: 17px;
+  padding-right: 17px;
+}
 .company-info-contacts {
   margin-left: 100px;
   width: 300px;
+}
+.company-info-contacts img {
+  width: 300px;
+  height: 158px;
+  margin-top: 7px;
+  margin-bottom: 32px;
+}
+.company-info-contacts .btn-nav {
+  width: 234px;
 }
 .company-info h2 {
   font-size: 30px;
@@ -775,10 +794,6 @@ body {
 .company-info p {
   margin: 0;
   margin-bottom: 24px;
-}
-.company-info .btn-nav {
-  padding-left: 17px;
-  padding-right: 17px;
 }
 .transport-companies {
   font-family: 'Cuprum', sans-serif;

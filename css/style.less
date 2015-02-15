@@ -119,6 +119,7 @@ body
     padding: 12px 33px;
     text-decoration: none;
     font-family: 'Cuprum', sans-serif;
+    text-align: center;
 }
 
 .btn-nav
@@ -128,7 +129,6 @@ body
     background-color: #ee3643;
     border-radius: 2px;
     width: 187px;
-    text-align: center;
     font-size: 14px;
     line-height: 24px;
     padding-top: 9px;
@@ -635,10 +635,10 @@ body
 
 .promo-block
 {
-    width: 275px;
-    height: 98px;
-    padding-left: 25px;
-    padding-top: 25px;
+    width: 278px;
+    height: 101px;
+    padding-left: 22px;
+    padding-top: 22px;
     margin-bottom: 20px;
     position: relative;
     color: white;
@@ -646,6 +646,10 @@ body
     font-size: 24px;
     line-height: 30px;
     font-family: 'Cuprum', sans-serif;
+
+    &-heading {
+        margin-bottom: 12px;
+    }
 
     &-materials {
         background: #f6b22d url('../img/icon-materials.png') no-repeat 80% center;
@@ -686,6 +690,9 @@ body
 
     .promo-block-btn {
         text-transform: uppercase;
+        padding: 10px 15px;
+        width: 105px;
+        margin-left: 2px;
         font-size: 14px;
         font-weight: normal;
         line-height: 18px;
@@ -822,10 +829,25 @@ body
     }
     &-description {
         width: 540px;
+        .btn-nav {
+            padding-left: 17px;
+            padding-right: 17px;    
+        }
     }
     &-contacts {
         margin-left: 100px;
         width: 300px;
+
+        img {
+            width: 300px;
+            height: 158px;
+            margin-top: 7px;
+            margin-bottom: 32px;
+        }
+
+        .btn-nav {
+            width: 234px;
+        }
     }
 
     h2 {
@@ -839,11 +861,6 @@ body
     p {
         margin: 0;
         margin-bottom: 24px;
-    }
-
-    .btn-nav {
-        padding-left: 17px;
-        padding-right: 17px;    
     }
 }
 
