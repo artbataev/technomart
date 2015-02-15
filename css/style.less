@@ -125,7 +125,20 @@ body
 {
     text-transform: uppercase;
     color: white;
-    background-color: red;
+    background-color: #ee3643;
+    border-radius: 2px;
+    width: 187px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 24px;
+    padding-top: 9px;
+    padding-bottom: 5px;
+    &:hover {
+        background-color: #ca2c37;
+    }
+    &:active {
+        background-color: #ba2732;
+    }
 }
 
 /*===============================
@@ -627,28 +640,64 @@ body
     padding-left: 25px;
     padding-top: 25px;
     margin-bottom: 20px;
+    position: relative;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    font-family: 'Cuprum', sans-serif;
 
     &-materials {
-        background: #f6b22d;
+        background: #f6b22d url('../img/icon-materials.png') no-repeat 80% center;
         float: left;
         margin-right: 20px;
     }
     &-instrument {
-        background: #4aafde;
+        background: #4aafde url('../img/icon-instrument.png') no-repeat 80% center;
         float: left;
         margin-right: 20px;
     }
     &-tech {
-        background: #cc79d1;
+        background: #cc79d1 url('../img/icon-techno.png') no-repeat 80% center;
         float: right;
     }
     &-sales {
-        background: #85d179;
+        background: #85d179 url('../img/icon-sales.png') no-repeat 80% center;
         float: right;
     }
     &-delivery {
-        background: #f6b22d;
+        background: #f6b22d url('../img/icon-delivery.png') no-repeat 80% center;
         float: right;
+    }
+
+    .flag {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 60px;
+        height: 60px;
+        text-indent: -1000px;
+        overflow: hidden;
+        z-index: 20;
+    }
+    .flag-new {
+        background: url("../img/bg-flag-new.png") no-repeat 0 0;
+    }
+
+    .promo-block-btn {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 18px;
+        color: white;
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 2px;
+        &:hover {
+            background: rgba(0, 0, 0, 0.3);
+        }
+        &:active {
+            background: rgba(0, 0, 0, 0.2);
+        }
     }
 }
 
@@ -673,8 +722,6 @@ body
 }
 
 .popular-section {
-    margin-top: 20px;
-
     &-heading {
         background: #f7f3ec;
         padding: 25px 30px;
@@ -691,15 +738,6 @@ body
             display: inline-block;
             margin: 0;
             padding: 0;
-        }
-        .btn-nav {
-            border-radius: 2px;
-            width: 187px;
-            text-align: center;
-            font-size: 14px;
-            line-height: 18px;
-            padding-top: 10px;
-            padding-bottom: 10px;
         }
     }
 
@@ -744,27 +782,98 @@ body
         
 .index-services {
     background: #f2f6f8;
-    padding-top: 65px;
-    padding-bottom: 100px;
+    padding-top: 50px;
+    padding-bottom: 35px;
+    h2 {
+        font-size: 30px;
+        font-family: 'Cuprum', sans-serif;
+        text-transform: uppercase;
+        font-weight: normal;
+        margin: 0;
+        margin-bottom: 30px;
+    }
+    &-list {
+        float: left;
+        width: 150px;
+        background: url('../img/bg-services-div.png') no-repeat right center;
+        min-height: 300px;
+    }
+    &-details {
+        float: left;
+        width: 600px;
+    }
+}
+
+.service-details {
+    &-delivery {
+        background: url('../img/img-services-delivery.png') no-repeat right center;
+        min-height: 300px;
+    }
 }
 
 
 .company-info {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 85px;
+    padding-bottom: 85px;
 
     &-description, 
     &-contacts {
         float: left;
     }
     &-description {
-        width: 550px;
+        width: 540px;
     }
     &-contacts {
+        margin-left: 100px;
         width: 300px;
+    }
+
+    h2 {
+        font-size: 30px;
+        font-family: 'Cuprum', sans-serif;
+        text-transform: uppercase;
+        font-weight: normal;
+        margin: 0;
+        margin-bottom: 28px;
+    }
+    p {
+        margin: 0;
+        margin-bottom: 24px;
+    }
+
+    .btn-nav {
+        padding-left: 17px;
+        padding-right: 17px;    
     }
 }
 
+.transport-companies {
+    font-family: 'Cuprum', sans-serif;
+    font-size: 18px;
+    line-height: 14px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 39px;
+    li {
+        padding: 0;
+        margin: 0;
+        padding-left: 35px;
+        margin-bottom: 26px;
+        position: relative;
+        &:before {
+            content:"";
+            display: inline-block;
+            width: 25px;
+            height: 2px;
+            background: #fb565a;
+            top: 6px;
+            left: 0;
+            position: absolute;
+        }
+    }
+}
 
 /*================================
 =            $Каталог            =

@@ -175,7 +175,20 @@ body {
 .btn-nav {
   text-transform: uppercase;
   color: white;
-  background-color: red;
+  background-color: #ee3643;
+  border-radius: 2px;
+  width: 187px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 24px;
+  padding-top: 9px;
+  padding-bottom: 5px;
+}
+.btn-nav:hover {
+  background-color: #ca2c37;
+}
+.btn-nav:active {
+  background-color: #ba2732;
 }
 /*===============================
 =            $Header            =
@@ -588,28 +601,62 @@ body {
   padding-left: 25px;
   padding-top: 25px;
   margin-bottom: 20px;
+  position: relative;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  font-family: 'Cuprum', sans-serif;
 }
 .promo-block-materials {
-  background: #f6b22d;
+  background: #f6b22d url('../img/icon-materials.png') no-repeat 80% center;
   float: left;
   margin-right: 20px;
 }
 .promo-block-instrument {
-  background: #4aafde;
+  background: #4aafde url('../img/icon-instrument.png') no-repeat 80% center;
   float: left;
   margin-right: 20px;
 }
 .promo-block-tech {
-  background: #cc79d1;
+  background: #cc79d1 url('../img/icon-techno.png') no-repeat 80% center;
   float: right;
 }
 .promo-block-sales {
-  background: #85d179;
+  background: #85d179 url('../img/icon-sales.png') no-repeat 80% center;
   float: right;
 }
 .promo-block-delivery {
-  background: #f6b22d;
+  background: #f6b22d url('../img/icon-delivery.png') no-repeat 80% center;
   float: right;
+}
+.promo-block .flag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  text-indent: -1000px;
+  overflow: hidden;
+  z-index: 20;
+}
+.promo-block .flag-new {
+  background: url("../img/bg-flag-new.png") no-repeat 0 0;
+}
+.promo-block .promo-block-btn {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 18px;
+  color: white;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+}
+.promo-block .promo-block-btn:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+.promo-block .promo-block-btn:active {
+  background: rgba(0, 0, 0, 0.2);
 }
 .promo-slider {
   float: left;
@@ -625,9 +672,6 @@ body {
 .promo-slider-nav,
 .promo-slider-link {
   display: none;
-}
-.popular-section {
-  margin-top: 20px;
 }
 .popular-section-heading {
   background: #f7f3ec;
@@ -646,15 +690,6 @@ body {
   display: inline-block;
   margin: 0;
   padding: 0;
-}
-.popular-section-heading .btn-nav {
-  border-radius: 2px;
-  width: 187px;
-  text-align: center;
-  font-size: 14px;
-  line-height: 18px;
-  padding-top: 10px;
-  padding-bottom: 10px;
 }
 .popular-section-box {
   margin-left: -20px;
@@ -689,22 +724,88 @@ body {
 }
 .index-services {
   background: #f2f6f8;
-  padding-top: 65px;
-  padding-bottom: 100px;
+  padding-top: 50px;
+  padding-bottom: 35px;
+}
+.index-services h2 {
+  font-size: 30px;
+  font-family: 'Cuprum', sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin: 0;
+  margin-bottom: 30px;
+}
+.index-services-list {
+  float: left;
+  width: 150px;
+  background: url('../img/bg-services-div.png') no-repeat right center;
+  min-height: 300px;
+}
+.index-services-details {
+  float: left;
+  width: 600px;
+}
+.service-details-delivery {
+  background: url('../img/img-services-delivery.png') no-repeat right center;
+  min-height: 300px;
 }
 .company-info {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 85px;
+  padding-bottom: 85px;
 }
 .company-info-description,
 .company-info-contacts {
   float: left;
 }
 .company-info-description {
-  width: 550px;
+  width: 540px;
 }
 .company-info-contacts {
+  margin-left: 100px;
   width: 300px;
+}
+.company-info h2 {
+  font-size: 30px;
+  font-family: 'Cuprum', sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin: 0;
+  margin-bottom: 28px;
+}
+.company-info p {
+  margin: 0;
+  margin-bottom: 24px;
+}
+.company-info .btn-nav {
+  padding-left: 17px;
+  padding-right: 17px;
+}
+.transport-companies {
+  font-family: 'Cuprum', sans-serif;
+  font-size: 18px;
+  line-height: 14px;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 39px;
+}
+.transport-companies li {
+  padding: 0;
+  margin: 0;
+  padding-left: 35px;
+  margin-bottom: 26px;
+  position: relative;
+}
+.transport-companies li:before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 2px;
+  background: #fb565a;
+  top: 6px;
+  left: 0;
+  position: absolute;
 }
 /*================================
 =            $Каталог            =
