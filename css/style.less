@@ -137,12 +137,11 @@ body {
     min-width: 960px;
     margin: 0;
     padding: 0;
-
-    color: #000000;
-    background: #ffffff;
-    // background: url('../technomart-index.jpg') no-repeat center top;
     // background: url("../technomart-catalog.jpg") no-repeat center top;
-    //opacity: 0.5;
+    // opacity: 0.5;
+
+    color: black;
+    // background: url("../technomart-index.jpg") no-repeat center top;
     background-color: white;
     background-repeat: no-repeat;
     background-position: center top;
@@ -796,7 +795,7 @@ body {
 =            $Главная            =
 ==================================*/
 .index-content {
-    padding-top: 60px;
+    padding-top: 59px;
     padding-bottom: 85px;
 }
 
@@ -827,29 +826,29 @@ body {
 
         margin-right: 20px;
 
-        background: #f6b22d url("../img/icon-materials.png") no-repeat 80% center;
+        background: #f6b22d url("../img/icon-materials.png") no-repeat 213px 30px;
     }
     &-instrument {
         float: left;
 
         margin-right: 20px;
 
-        background: #4aafde url("../img/icon-instrument.png") no-repeat 80% center;
+        background: #4aafde url("../img/icon-instrument.png") no-repeat 197px 33px;
     }
     &-tech {
         float: right;
 
-        background: #cc79d1 url("../img/icon-techno.png") no-repeat 80% center;
+        background: #cc79d1 url("../img/icon-techno.png") no-repeat 191px 30px;
     }
     &-sales {
         float: right;
 
-        background: #85d179 url("../img/icon-sales.png") no-repeat 80% center;
+        background: #85d179 url("../img/icon-sales.png") no-repeat 196px 26px;
     }
     &-delivery {
         float: right;
 
-        background: #f6b22d url("../img/icon-delivery.png") no-repeat 80% center;
+        background: #f6b22d url("../img/icon-delivery.png") no-repeat 190px 33px;
     }
     .flag {
         position: absolute;
@@ -913,7 +912,7 @@ body {
         font-size: 0;
 
         margin-bottom: 18px;
-        padding: 25px 30px;
+        padding: 25px 28px;
         padding-right: 0;
 
         background: #f7f3ec;
@@ -979,9 +978,10 @@ body {
     padding-bottom: 35px;
 
     background: #f2f6f8;
-    h2 {
+    h2,
+    h3 {
         font-family: "Cuprum", sans-serif;
-        font-size: 30px;
+        font-size: 28px;
         font-weight: normal;
 
         margin: 0;
@@ -989,26 +989,54 @@ body {
 
         text-transform: uppercase;
     }
+    h3 {
+        font-size: 36px;
+
+        color: #32425c;
+    }
     &-list {
         float: left;
 
-        width: 150px;
-        min-height: 300px;
+        width: 240px;
 
         background: url("../img/bg-services-div.png") no-repeat right center;
+        ul {
+            margin: 0;
+            margin-top: 70px;
+            padding: 0;
+
+            list-style: none;
+        }
+        li {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            display: inline-block;
+
+            width: 210px;
+            padding: 15px;
+
+            vertical-align: top;
+            text-decoration: none;
+
+            color: white;
+            background: #32425c;
+        }
     }
     &-details {
         float: left;
 
-        width: 600px;
+        width: 700px;
     }
 }
 
 .service-details {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    padding-left: 80px;
     &-delivery {
-        min-height: 300px;
-
-        background: url("../img/img-services-delivery.png") no-repeat right center;
+        background: url("../img/img-services-delivery.png") no-repeat right 90px;
     }
 }
 

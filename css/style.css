@@ -146,8 +146,7 @@ body {
   min-width: 960px;
   margin: 0;
   padding: 0;
-  color: #000000;
-  background: #ffffff;
+  color: black;
   background-color: white;
   background-repeat: no-repeat;
   background-position: center top;
@@ -644,7 +643,7 @@ body {
 =            $Главная            =
 ==================================*/
 .index-content {
-  padding-top: 60px;
+  padding-top: 59px;
   padding-bottom: 85px;
 }
 .promo-blocks {
@@ -669,24 +668,24 @@ body {
 .promo-block-materials {
   float: left;
   margin-right: 20px;
-  background: #f6b22d url("../img/icon-materials.png") no-repeat 80% center;
+  background: #f6b22d url("../img/icon-materials.png") no-repeat 213px 30px;
 }
 .promo-block-instrument {
   float: left;
   margin-right: 20px;
-  background: #4aafde url("../img/icon-instrument.png") no-repeat 80% center;
+  background: #4aafde url("../img/icon-instrument.png") no-repeat 197px 33px;
 }
 .promo-block-tech {
   float: right;
-  background: #cc79d1 url("../img/icon-techno.png") no-repeat 80% center;
+  background: #cc79d1 url("../img/icon-techno.png") no-repeat 191px 30px;
 }
 .promo-block-sales {
   float: right;
-  background: #85d179 url("../img/icon-sales.png") no-repeat 80% center;
+  background: #85d179 url("../img/icon-sales.png") no-repeat 196px 26px;
 }
 .promo-block-delivery {
   float: right;
-  background: #f6b22d url("../img/icon-delivery.png") no-repeat 80% center;
+  background: #f6b22d url("../img/icon-delivery.png") no-repeat 190px 33px;
 }
 .promo-block .flag {
   position: absolute;
@@ -737,7 +736,7 @@ body {
 .popular-section-heading {
   font-size: 0;
   margin-bottom: 18px;
-  padding: 25px 30px;
+  padding: 25px 28px;
   padding-right: 0;
   background: #f7f3ec;
 }
@@ -788,27 +787,54 @@ body {
   padding-bottom: 35px;
   background: #f2f6f8;
 }
-.index-services h2 {
+.index-services h2,
+.index-services h3 {
   font-family: "Cuprum", sans-serif;
-  font-size: 30px;
+  font-size: 28px;
   font-weight: normal;
   margin: 0;
   margin-bottom: 30px;
   text-transform: uppercase;
 }
+.index-services h3 {
+  font-size: 36px;
+  color: #32425c;
+}
 .index-services-list {
   float: left;
-  width: 150px;
-  min-height: 300px;
+  width: 240px;
   background: url("../img/bg-services-div.png") no-repeat right center;
+}
+.index-services-list ul {
+  margin: 0;
+  margin-top: 70px;
+  padding: 0;
+  list-style: none;
+}
+.index-services-list li {
+  margin: 0;
+  padding: 0;
+}
+.index-services-list a {
+  display: inline-block;
+  width: 210px;
+  padding: 15px;
+  vertical-align: top;
+  text-decoration: none;
+  color: white;
+  background: #32425c;
 }
 .index-services-details {
   float: left;
-  width: 600px;
+  width: 700px;
+}
+.service-details {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  padding-left: 80px;
 }
 .service-details-delivery {
-  min-height: 300px;
-  background: url("../img/img-services-delivery.png") no-repeat right center;
+  background: url("../img/img-services-delivery.png") no-repeat right 90px;
 }
 .company-info {
   padding-top: 85px;
