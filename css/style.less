@@ -4,18 +4,23 @@
 /**
 *
 * Содержание
+* Иконочные шрифты
 * Общие стили
 * Header
 * Footer
-* Промо-блок
-* Популярное
-* Сервисы
-* О компании
+* Сетка товаров
+* Главная
+* Каталог
+* 
 **/
 
 
 // font-family: 'Cuprum', sans-serif;
 // font-family: 'PT Sans', sans-serif;
+
+/*=========================================
+=            $Иконочные шрифты            =
+=========================================*/
 
 @font-face {
     font-family: "symbols-technomart";
@@ -129,6 +134,17 @@
     content: "🔖";
 } /* '\1f516' */
 
+/*-----  End of $Иконочные шрифты  ------*/
+
+
+
+
+
+/*====================================
+=            $Общие стили            =
+====================================*/
+
+
 body {
     font-family: "PT Sans", sans-serif;
     font-size: 13px;
@@ -139,7 +155,7 @@ body {
     padding: 0;
     // opacity: 0.5;
 
-    color: black;
+    // color: black;
     // background: url("../technomart-index.jpg") no-repeat center top;
     // background: url("../technomart-catalog.jpg") no-repeat center top;
     background-color: white;
@@ -148,10 +164,6 @@ body {
     background-size: 1200px auto;
 }
 
-
-/*====================================
-=            $Общие стили            =
-====================================*/
 
 .clearfix:after {
     display: table;
@@ -197,6 +209,10 @@ body {
         background-color: #ba2732;
     }
 }
+
+/*-----  End of $Иконочные шрифты  ------*/
+
+
 
 
 /*===============================
@@ -435,27 +451,31 @@ body {
 }
 
 .btn-profile {
-    padding-left: 42px;
-    padding-bottom: 3px;
+    position: relative;
+
     width: 200px;
-    padding-right: 58px;
     margin-left: 0;
+    padding-right: 58px;
+    padding-bottom: 3px;
+    padding-left: 42px;
     i {
         line-height: 24px;
     }
-    position: relative;
 }
 
 .link-profile {
     text-decoration: none;
+
     color: black;
     &:before {
-        content: "\1f468";
         font-family: "symbols-technomart";
         font-size: 18px;
+
         position: absolute;
         top: 9px;
         left: 16px;
+
+        content: "\1f468";
     }
     &:hover:before {
         color: #32425c;
@@ -469,16 +489,20 @@ body {
 }
 
 .link-logout {
-    text-decoration: none;
     font-size: 0;
+
+    text-decoration: none;
+
     color: black;
     &:before {
-        content: "\241b";
         font-family: "symbols-technomart";
         font-size: 18px;
+
         position: absolute;
         top: 10px;
         right: 11px;
+
+        content: "\241b";
     }
     &:hover:before {
         color: #32425c;
@@ -754,7 +778,7 @@ body {
 
 
 /*========================================
-=            $Каталог товаров            =
+=            $Сетка товаров            =
 ========================================*/
 
 
@@ -910,7 +934,7 @@ body {
     }
 }
 
-/*-----  End of $Каталог товаров  ------*/
+/*-----  End of $Сетка товаров  ------*/
 
 
 
@@ -1019,36 +1043,84 @@ body {
 
     width: 620px;
     height: 265px;
-    &-heading {
+    &-caption {
         font-family: "Cuprum", sans-serif;
 
         position: absolute;
-        top: 15px;
-        left: 20px;
+        top: 22px;
+        left: 24px;
 
         color: white;
-        .promo-caption {
+        .promo-heading {
             font-size: 36px;
             font-weight: bold;
             line-height: 40px;
+            text-transform: uppercase;
         }
         .promo-description {
             font-size: 18px;
             line-height: 24px;
         }
     }
-    &-link {
+    .btn-nav {
         position: absolute;
-        bottom: 15px;
-        left: 20px;
+        bottom: 20px;
+        left: 25px;
+        padding-right: 4px;
+        padding-left: 4px;
     }
-    &-nav {
-        font-family: "symbols-technomart";
-        font-size: 45px;
+    &-item {
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+    .slider-control {
+        font-size: 0;
 
         position: absolute;
-        top: 60px;
-        left: 20px;
+        top: 123px;
+        &:after {
+            font-family: "symbols-technomart";
+            font-size: 45px;
+
+            display: block;
+
+            color: white;
+        }
+        &-prev {
+            left: 26px;
+            &:after {
+                content: "\3c";
+            }
+        }
+        &-next {
+            right: 20px;
+            &:after {
+                content: "\3e";
+            }
+        }
+    }
+    .slider-toggles {
+        font-size: 0;
+
+        position: absolute;
+        bottom: 40px;
+        left: 300px;
+    }
+    .slider-toggle {
+        display: inline-block;
+
+        width: 6px;
+        height: 6px;
+        margin-right: 10px;
+
+        border: 2px solid white;
+        border-radius: 50%;
+        background: white;
+        &.active {
+            background: #ee3643;
+        }
     }
 }
 
@@ -1144,14 +1216,28 @@ body {
         color: #32425c;
     }
     &-list {
+        position: relative;
+        z-index: 10;
+
         float: left;
 
         width: 240px;
+        &:after {
+            position: absolute;
+            z-index: 20;
+            top: 0;
+            right: 0;
 
-        background: url("../img/bg-services-div.png") no-repeat right center;
+            width: 10px;
+            height: 272px;
+
+            content: "";
+
+            background: url("../img/bg-services-div.png") no-repeat right center;
+        }
         ul {
             margin: 0;
-            margin-top: 70px;
+            margin-top: 50px;
             padding: 0;
 
             list-style: none;
@@ -1167,6 +1253,9 @@ body {
                 content: "";
 
                 background: url("../img/bg-services-inner.png") repeat-x;
+            }
+            &:last-of-type:after {
+                background: none;
             }
         }
         a {
@@ -1184,43 +1273,49 @@ body {
 
             color: white;
             background: #32425c;
+            &.active {
+                color: #32425c;
+                background: white;
+            }
         }
-    }
-    &-details {
-        float: left;
-
-        width: 700px;
     }
 }
 
 .service-details {
+    position: relative;
+
     display: none;
-    &-delivery {
-        // background: url("../img/img-services-delivery.png") no-repeat right 92px;
-    }
-    &-active {
-        position: relative;
+    float: left;
+
+    width: 540px;
+    height: 222px;
+    padding-top: 74px;
+    padding-right: 80px;
+    padding-bottom: 0;
+    padding-left: 80px;
+    &:after {
+        position: absolute;
+        top: 92px;
+        right: 0;
 
         display: block;
 
-        padding-top: 74px;
-        padding-right: 345px;
-        padding-bottom: 70px;
-        padding-left: 80px;
-        &:after {
-            position: absolute;
-            top: 92px;
-            right: 0;
+        width: 468px;
+        height: 261px;
 
-            display: block;
-
-            width: 468px;
-            height: 261px;
-
-            content: "";
-
-            background: url("../img/img-services-delivery.png") no-repeat right top;
-        }
+        content: "";
+    }
+    &.active {
+        display: block;
+    }
+    &-delivery:after {
+        background: url("../img/img-services-delivery.png") no-repeat right top;
+    }
+    &-guarantee:after {
+        background: url("../img/img-services-guarantee.png") no-repeat right top;
+    }
+    &-credit:after {
+        background: url("../img/img-services-credit.png") no-repeat right top;
     }
 }
 
@@ -1303,6 +1398,15 @@ body {
     }
 }
 
+
+/*-----  End of $Главная  ------*/
+
+
+
+
+
+
+
 /*================================
 =            $Каталог            =
 ================================*/
@@ -1375,9 +1479,9 @@ body {
         float: left;
     }
     &-sort {
+        width: 664px;
         margin-left: 20px;
         padding-bottom: 5px;
-        width: 664px;
         &-link {
             font-size: 13px;
             line-height: 18px;
@@ -1397,9 +1501,10 @@ body {
                 border-bottom: 1px solid #ee3643;
             }
             &.active {
+                cursor: default;
+
                 color: #ee3643;
                 border: 0;
-                cursor: default;
             }
         }
         &-up,
@@ -1425,10 +1530,10 @@ body {
                 color: black;
             }
             &.active {
-                color: #ee3643;
                 cursor: default;
-            }
 
+                color: #ee3643;
+            }
         }
         &-up:before {
             content: "\25b2";
@@ -1722,3 +1827,5 @@ body {
         text-transform: uppercase;
     }
 }
+
+/*-----  End of $Каталог  ------*/

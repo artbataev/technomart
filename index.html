@@ -83,21 +83,29 @@
                         </a>
                     </div>
                     <div class="promo-slider">
-                        <div class="promo-slide">
-                            <div class="promo-slider-heading">
-                                <div class="promo-caption">Дрели</div>
-                                <div class="promo-description">Соседям на радость</div>
-                            </div>
-                            <div class="promo-image">
+                        <div class="promo-slider-wrapper">
+                            <div class="promo-slider-item active">
                                 <img src="img/img-slider-1.jpg" height="266" width="620" alt="Чувак с дрелью">
+                                <div class="promo-slider-caption">
+                                    <div class="promo-heading">Дрели</div>
+                                    <div class="promo-description">Соседям на радость!</div>
+                                </div>
                             </div>
-                            <div class="promo-slider-link">
-                                <a href="#" class="btn btn-nav">Открыть каталог</a>
+                            <div class="promo-slider-item">
+                                <img src="img/img-slider-2.jpg" height="266" width="620" alt="Чувак с перфоратором">
+                                <div class="promo-slider-caption">
+                                    <div class="promo-heading">Перфораторы</div>
+                                    <div class="promo-description">Настоящие мужские игрушки</div>
+                                </div>
                             </div>
                         </div>
-                        <div class="promo-slider-nav">
-                            <button class="sliber-btn slider-btn-prev"><i class="icon-left"></i></button>
-                            <button class="sliber-btn slider-btn-next"><i class="icon-right"></i></button>
+                        <!-- Controls -->
+                        <a href="#" class="btn btn-nav">Открыть каталог</a>
+                        <a class="slider-control slider-control-prev"></a>
+                        <a class="slider-control slider-control-next"></a>
+                        <div class="slider-toggles">
+                            <div class="slider-toggle active"></div>
+                            <div class="slider-toggle"></div>
                         </div>
                     </div>
                     <div class="promo-block promo-block-sales">
@@ -219,36 +227,34 @@
                 Хороший интернет-магазин отличается от плохого не только ценами!<br>
                 Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
                 <div class="index-services-all">
-                    <div class="index-services-list">
+                    <div class="index-services-list" >
                         <ul>
-                            <li class="active"><a href="#">Доставка</a></li>
-                            <li><a href="#">Гарантия</a></li>
-                            <li><a href="#">Кредит</a></li>
+                            <li><a class="active" href="#tabs-1">Доставка</a></li>
+                            <li><a href="#tabs-2">Гарантия</a></li>
+                            <li><a href="#tabs-3">Кредит</a></li>
                         </ul>
                     </div>
-                    <div class="index-services-details">
-                        <div class="service-details-active service-details-delivery"> <!-- фоновый рисунок меняется -->
-                            <h3>Доставка</h3>
-                            Мы с удовольствием доставим ваш товар прямо
-                            к вашему подъезду совершенно бесплатно!
-                            Ведь мы неплохо заработаем, <br>
-                            поднимая его на ваш этаж!
-                        </div>
-                        <div class="service-details service-details-guarantee">
-                            <h3>Гарантия</h3>
-                            Если купленный у нас товар поломается или заискрит, 
-                            а также в случае пожара, спровоцированного возгаранием,
-                            вы всегда можете быть уверены в нашей гарантии. Мы обменяем
-                            сгоревший товар на новый.
-                            Дом уж восстановите как-нибудь сами.
-                        </div>
-                        <div class="service-details service-details-credit">
-                            <h3>Кредит</h3>
-                            Залезть в долговую яму стало проще!
-                            Кредитные консультанты придут вам на помощь.
-                            <a class="btn btn-nav">Отправить заявку</a>
-                        </div> 
+                    <div class="service-details service-details-delivery active" id="tabs-1"> <!-- фоновый рисунок меняется -->
+                        <h3>Доставка</h3>
+                        Мы с удовольствием доставим ваш товар прямо<br>
+                        к вашему подъезду совершенно бесплатно!<br>
+                        Ведь мы неплохо заработаем, <br>
+                        поднимая его на ваш этаж!
                     </div>
+                    <div class="service-details service-details-guarantee" id="tabs-2">
+                        <h3>Гарантия</h3>
+                        Если купленный у нас товар поломается или заискрит, <br>
+                        а также в случае пожара, спровоцированного возгаранием,<br>
+                        вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br>
+                        сгоревший товар на новый. <br>
+                        Дом уж восстановите как-нибудь сами.
+                    </div>
+                    <div class="service-details service-details-credit" id="tabs-3">
+                        <h3>Кредит</h3>
+                        Залезть в долговую яму стало проще!<br>
+                        Кредитные консультанты придут вам на помощь.<br>
+                        <a class="btn btn-nav">Отправить заявку</a>
+                    </div> 
                 </div>
             </div>
         </section>
@@ -330,5 +336,6 @@
                 </section>
             </div>
         </footer>
+        <script src="js/script.js"></script>
     </body>
 </html>
