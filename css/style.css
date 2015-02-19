@@ -280,6 +280,8 @@ body {
   line-height: 18px;
   width: 270px;
   height: 42px;
+  margin: 0;
+  padding: 0;
   padding-left: 42px;
   color: white;
   border: 0;
@@ -347,11 +349,114 @@ body {
   float: right;
 }
 .btn-login,
-.btn-register {
+.btn-register,
+.btn-profile {
   font-size: 21px;
-  margin-left: 10px;
+  line-height: 25px;
+  margin-left: 7px;
+  padding: 10px 24px;
   color: black;
   background: white;
+}
+.btn-login {
+  position: relative;
+  padding-left: 49px;
+}
+.btn-login:before {
+  font-family: "symbols-technomart";
+  position: absolute;
+  top: 9px;
+  left: 16px;
+  content: "\2386";
+}
+.btn-profile {
+  padding-left: 42px;
+  padding-bottom: 3px;
+  width: 200px;
+  padding-right: 58px;
+  margin-left: 0;
+  position: relative;
+}
+.btn-profile i {
+  line-height: 24px;
+}
+.link-profile {
+  text-decoration: none;
+  color: black;
+}
+.link-profile:before {
+  content: "\1f468";
+  font-family: "symbols-technomart";
+  font-size: 18px;
+  position: absolute;
+  top: 9px;
+  left: 16px;
+}
+.link-profile:hover:before {
+  color: #32425c;
+}
+.link-profile:active {
+  color: #c5c5c5;
+}
+.link-profile:active:before {
+  color: #c5c5c5;
+}
+.link-logout {
+  text-decoration: none;
+  font-size: 0;
+  color: black;
+}
+.link-logout:before {
+  content: "\241b";
+  font-family: "symbols-technomart";
+  font-size: 18px;
+  position: absolute;
+  top: 10px;
+  right: 11px;
+}
+.link-logout:hover:before {
+  color: #32425c;
+}
+.link-logout:active {
+  color: #c5c5c5;
+}
+.link-logout:active:before {
+  color: #c5c5c5;
+}
+.user-links {
+  height: 0;
+  margin: 0;
+  margin-left: 18px;
+  padding: 0;
+  list-style: none;
+}
+.user-links li {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  margin-top: 4px;
+  padding: 0;
+}
+.user-links li:after {
+  position: absolute;
+  top: 9px;
+  right: 11px;
+  display: block;
+  width: 4px;
+  height: 4px;
+  content: "";
+  border-radius: 50%;
+  background-color: #32425c;
+}
+.user-links li:last-child:after {
+  display: none;
+}
+.user-links a {
+  font-size: 16px;
+  line-height: 18px;
+  padding-right: 30px;
+  text-decoration: underline;
+  color: #32425c;
 }
 .main-menu {
   display: block;
@@ -443,7 +548,7 @@ body {
   line-height: 30px;
   display: inline-block;
   width: 190px;
-  margin-bottom: 33px;
+  margin-bottom: 34px;
   padding: 15px;
   padding-top: 18px;
   text-align: center;
@@ -725,13 +830,32 @@ body {
   height: 265px;
 }
 .promo-slider-heading {
+  font-family: "Cuprum", sans-serif;
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 15px;
+  left: 20px;
+  color: white;
 }
-.promo-slider-nav,
+.promo-slider-heading .promo-caption {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 40px;
+}
+.promo-slider-heading .promo-description {
+  font-size: 18px;
+  line-height: 24px;
+}
 .promo-slider-link {
-  display: none;
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+}
+.promo-slider-nav {
+  font-family: "symbols-technomart";
+  font-size: 45px;
+  position: absolute;
+  top: 60px;
+  left: 20px;
 }
 .popular-section-heading {
   font-size: 0;
@@ -783,8 +907,9 @@ body {
   box-shadow: 0 4px 10px 0 rgba(41, 52, 73, 0.5);
 }
 .index-services {
+  position: relative;
   padding-top: 50px;
-  padding-bottom: 35px;
+  padding-bottom: 60px;
   background: #f2f6f8;
 }
 .index-services h2,
@@ -793,11 +918,12 @@ body {
   font-size: 28px;
   font-weight: normal;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
   text-transform: uppercase;
 }
 .index-services h3 {
   font-size: 36px;
+  margin-bottom: 30px;
   color: #32425c;
 }
 .index-services-list {
@@ -815,11 +941,20 @@ body {
   margin: 0;
   padding: 0;
 }
+.index-services-list li:after {
+  display: block;
+  height: 2px;
+  content: "";
+  background: url("../img/bg-services-inner.png") repeat-x;
+}
 .index-services-list a {
+  font-family: "Cuprum", sans-serif;
+  font-size: 21px;
+  line-height: 30px;
   display: inline-block;
-  width: 210px;
-  padding: 15px;
-  vertical-align: top;
+  width: 195px;
+  padding: 15px 22px;
+  vertical-align: middle;
   text-decoration: none;
   color: white;
   background: #32425c;
@@ -829,15 +964,28 @@ body {
   width: 700px;
 }
 .service-details {
-  padding-top: 70px;
+  display: none;
+}
+.service-details-active {
+  position: relative;
+  display: block;
+  padding-top: 74px;
+  padding-right: 345px;
   padding-bottom: 70px;
   padding-left: 80px;
 }
-.service-details-delivery {
-  background: url("../img/img-services-delivery.png") no-repeat right 90px;
+.service-details-active:after {
+  position: absolute;
+  top: 92px;
+  right: 0;
+  display: block;
+  width: 468px;
+  height: 261px;
+  content: "";
+  background: url("../img/img-services-delivery.png") no-repeat right top;
 }
 .company-info {
-  padding-top: 85px;
+  padding-top: 82px;
   padding-bottom: 85px;
 }
 .company-info-description,
@@ -907,8 +1055,8 @@ body {
 =            $Каталог            =
 ================================*/
 .breadcrumbs {
-  padding-top: 20px;
-  padding-bottom: 15px;
+  padding-top: 19px;
+  padding-bottom: 16px;
 }
 .breadcrumbs a:hover {
   text-decoration: underline;
@@ -952,32 +1100,70 @@ body {
   line-height: 18px;
   margin-bottom: 20px;
   padding: 9px 18px;
+  text-align: right;
   text-transform: uppercase;
   border: 1px solid #f7f3ec;
   border-radius: 2px;
   background: #f7f3ec;
 }
+.heading-filter-title {
+  float: left;
+}
 .heading-filter-sort {
   margin-left: 20px;
+  padding-bottom: 5px;
+  width: 664px;
 }
-.heading-filter-sort a {
+.heading-filter-sort-link {
   font-size: 13px;
-  line-height: 13px;
+  line-height: 18px;
   display: inline-block;
+  margin-right: 25px;
+  margin-left: 40px;
+  vertical-align: top;
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.3);
+  color: #c6c2bd;
   border-bottom: 1px dotted #ee3643;
 }
-.heading-filter-sort a:hover {
+.heading-filter-sort-link:hover {
   color: black;
   border-bottom: 1px solid #ee3643;
 }
-.heading-filter-sort span {
-  font-size: 13px;
-  line-height: 13px;
-  display: inline-block;
-  text-decoration: none;
+.heading-filter-sort-link.active {
   color: #ee3643;
+  border: 0;
+  cursor: default;
+}
+.heading-filter-sort-up,
+.heading-filter-sort-down {
+  font-size: 0;
+  margin-right: 0;
+  margin-left: 18px;
+  text-decoration: none;
+  color: #c6c2bd;
+}
+.heading-filter-sort-up:before,
+.heading-filter-sort-down:before {
+  font-family: "symbols-technomart";
+  font-size: 23px;
+  line-height: 18px;
+  display: inline-block;
+  vertical-align: top;
+}
+.heading-filter-sort-up:hover,
+.heading-filter-sort-down:hover {
+  color: black;
+}
+.heading-filter-sort-up.active,
+.heading-filter-sort-down.active {
+  color: #ee3643;
+  cursor: default;
+}
+.heading-filter-sort-up:before {
+  content: "\25b2";
+}
+.heading-filter-sort-down:before {
+  content: "\25bc";
 }
 .catalog-filter {
   float: left;

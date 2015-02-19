@@ -137,11 +137,11 @@ body {
     min-width: 960px;
     margin: 0;
     padding: 0;
-    // background: url("../technomart-catalog.jpg") no-repeat center top;
     // opacity: 0.5;
 
     color: black;
     // background: url("../technomart-index.jpg") no-repeat center top;
+    // background: url("../technomart-catalog.jpg") no-repeat center top;
     background-color: white;
     background-repeat: no-repeat;
     background-position: center top;
@@ -315,6 +315,8 @@ body {
 
         width: 270px;
         height: 42px;
+        margin: 0;
+        padding: 0;
         padding-left: 42px;
 
         color: white;
@@ -405,13 +407,134 @@ body {
 }
 
 .btn-login,
-.btn-register {
+.btn-register,
+.btn-profile {
     font-size: 21px;
+    line-height: 25px;
 
-    margin-left: 10px;
+    margin-left: 7px;
+    padding: 10px 24px;
 
     color: black;
     background: white;
+}
+
+.btn-login {
+    position: relative;
+
+    padding-left: 49px;
+    &:before {
+        font-family: "symbols-technomart";
+
+        position: absolute;
+        top: 9px;
+        left: 16px;
+
+        content: "\2386";
+    }
+}
+
+.btn-profile {
+    padding-left: 42px;
+    padding-bottom: 3px;
+    width: 200px;
+    padding-right: 58px;
+    margin-left: 0;
+    i {
+        line-height: 24px;
+    }
+    position: relative;
+}
+
+.link-profile {
+    text-decoration: none;
+    color: black;
+    &:before {
+        content: "\1f468";
+        font-family: "symbols-technomart";
+        font-size: 18px;
+        position: absolute;
+        top: 9px;
+        left: 16px;
+    }
+    &:hover:before {
+        color: #32425c;
+    }
+    &:active {
+        color: #c5c5c5;
+        &:before {
+            color: #c5c5c5;
+        }
+    }
+}
+
+.link-logout {
+    text-decoration: none;
+    font-size: 0;
+    color: black;
+    &:before {
+        content: "\241b";
+        font-family: "symbols-technomart";
+        font-size: 18px;
+        position: absolute;
+        top: 10px;
+        right: 11px;
+    }
+    &:hover:before {
+        color: #32425c;
+    }
+    &:active {
+        color: #c5c5c5;
+        &:before {
+            color: #c5c5c5;
+        }
+    }
+}
+
+.user-links {
+    height: 0;
+    margin: 0;
+    margin-left: 18px;
+    padding: 0;
+
+    list-style: none;
+    li {
+        position: relative;
+
+        display: inline-block;
+
+        margin: 0;
+        margin-top: 4px;
+        padding: 0;
+        &:after {
+            position: absolute;
+            top: 9px;
+            right: 11px;
+
+            display: block;
+
+            width: 4px;
+            height: 4px;
+
+            content: "";
+
+            border-radius: 50%;
+            background-color: #32425c;
+        }
+        &:last-child:after {
+            display: none;
+        }
+    }
+    a {
+        font-size: 16px;
+        line-height: 18px;
+
+        padding-right: 30px;
+
+        text-decoration: underline;
+
+        color: #32425c;
+    }
 }
 
 .main-menu {
@@ -534,7 +657,7 @@ body {
         display: inline-block;
 
         width: 190px;
-        margin-bottom: 33px;
+        margin-bottom: 34px;
         padding: 15px;
         padding-top: 18px;
 
@@ -897,13 +1020,35 @@ body {
     width: 620px;
     height: 265px;
     &-heading {
+        font-family: "Cuprum", sans-serif;
+
         position: absolute;
-        top: 10px;
-        left: 10px;
+        top: 15px;
+        left: 20px;
+
+        color: white;
+        .promo-caption {
+            font-size: 36px;
+            font-weight: bold;
+            line-height: 40px;
+        }
+        .promo-description {
+            font-size: 18px;
+            line-height: 24px;
+        }
     }
-    &-nav,
     &-link {
-        display: none;
+        position: absolute;
+        bottom: 15px;
+        left: 20px;
+    }
+    &-nav {
+        font-family: "symbols-technomart";
+        font-size: 45px;
+
+        position: absolute;
+        top: 60px;
+        left: 20px;
     }
 }
 
@@ -974,8 +1119,10 @@ body {
 }
 
 .index-services {
+    position: relative;
+
     padding-top: 50px;
-    padding-bottom: 35px;
+    padding-bottom: 60px;
 
     background: #f2f6f8;
     h2,
@@ -985,12 +1132,14 @@ body {
         font-weight: normal;
 
         margin: 0;
-        margin-bottom: 30px;
+        margin-bottom: 28px;
 
         text-transform: uppercase;
     }
     h3 {
         font-size: 36px;
+
+        margin-bottom: 30px;
 
         color: #32425c;
     }
@@ -1010,14 +1159,27 @@ body {
         li {
             margin: 0;
             padding: 0;
+            &:after {
+                display: block;
+
+                height: 2px;
+
+                content: "";
+
+                background: url("../img/bg-services-inner.png") repeat-x;
+            }
         }
         a {
+            font-family: "Cuprum", sans-serif;
+            font-size: 21px;
+            line-height: 30px;
+
             display: inline-block;
 
-            width: 210px;
-            padding: 15px;
+            width: 195px;
+            padding: 15px 22px;
 
-            vertical-align: top;
+            vertical-align: middle;
             text-decoration: none;
 
             color: white;
@@ -1032,17 +1194,39 @@ body {
 }
 
 .service-details {
-    padding-top: 70px;
-    padding-bottom: 70px;
-    padding-left: 80px;
+    display: none;
     &-delivery {
-        background: url("../img/img-services-delivery.png") no-repeat right 90px;
+        // background: url("../img/img-services-delivery.png") no-repeat right 92px;
+    }
+    &-active {
+        position: relative;
+
+        display: block;
+
+        padding-top: 74px;
+        padding-right: 345px;
+        padding-bottom: 70px;
+        padding-left: 80px;
+        &:after {
+            position: absolute;
+            top: 92px;
+            right: 0;
+
+            display: block;
+
+            width: 468px;
+            height: 261px;
+
+            content: "";
+
+            background: url("../img/img-services-delivery.png") no-repeat right top;
+        }
     }
 }
 
 
 .company-info {
-    padding-top: 85px;
+    padding-top: 82px;
     padding-bottom: 85px;
     &-description,
     &-contacts {
@@ -1124,8 +1308,8 @@ body {
 ================================*/
 
 .breadcrumbs {
-    padding-top: 20px;
-    padding-bottom: 15px;
+    padding-top: 19px;
+    padding-bottom: 16px;
     a {
         &:hover {
             text-decoration: underline;
@@ -1181,37 +1365,76 @@ body {
     margin-bottom: 20px;
     padding: 9px 18px;
 
+    text-align: right;
     text-transform: uppercase;
 
     border: 1px solid #f7f3ec;
     border-radius: 2px;
     background: #f7f3ec;
+    &-title {
+        float: left;
+    }
     &-sort {
         margin-left: 20px;
-        a {
+        padding-bottom: 5px;
+        width: 664px;
+        &-link {
             font-size: 13px;
-            line-height: 13px;
+            line-height: 18px;
 
             display: inline-block;
 
+            margin-right: 25px;
+            margin-left: 40px;
+
+            vertical-align: top;
             text-decoration: none;
 
-            color: rgba(0, 0, 0, 0.3);
+            color: #c6c2bd;
             border-bottom: 1px dotted #ee3643;
             &:hover {
                 color: black;
                 border-bottom: 1px solid #ee3643;
             }
+            &.active {
+                color: #ee3643;
+                border: 0;
+                cursor: default;
+            }
         }
-        span {
-            font-size: 13px;
-            line-height: 13px;
+        &-up,
+        &-down {
+            font-size: 0;
 
-            display: inline-block;
+            margin-right: 0;
+            margin-left: 18px;
 
             text-decoration: none;
 
-            color: #ee3643;
+            color: #c6c2bd;
+            &:before {
+                font-family: "symbols-technomart";
+                font-size: 23px;
+                line-height: 18px;
+
+                display: inline-block;
+
+                vertical-align: top;
+            }
+            &:hover {
+                color: black;
+            }
+            &.active {
+                color: #ee3643;
+                cursor: default;
+            }
+
+        }
+        &-up:before {
+            content: "\25b2";
+        }
+        &-down:before {
+            content: "\25bc";
         }
     }
 }
