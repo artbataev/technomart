@@ -15,7 +15,8 @@
                         <a href="index.html">Техномарт</a>
                     </div>
                     <form class="header-search" action="" method="get">
-                        <input type="search" name="q" placeholder="Поиск">
+                        <input type="text" name="q" placeholder="Поиск">
+                        <!-- search не поддается стилизации в Safari -->
                         <input type="submit">
                     </form>
                     <a href="#" class="header-wishlist">Закладки: 0</a>
@@ -336,6 +337,24 @@
                 </section>
             </div>
         </footer>
+        <div class="modal-content">
+            <div class="modal-content-close" title="Закрыть">Закрыть</div>
+            <form class="email-form" action="" method="post">
+                <label for="ef-name">Ваше имя:
+                    <input type="text" placeholder="Представьтесь, пожалуйста" id="ef-name" name="name">
+                </label>
+                <label for="ef-email">Ваш e-mail:
+                    <input type="email" placeholder="Для отправки ответа" id="ef-email" name="email">
+                </label>
+                <label for="ef-text">Текст письма:
+                    <textarea placeholder="В свободной форме" id="ef-text" name="text"></textarea>
+                </label>
+                <div class="modal-buttons">
+                    <button class="btn" type="submit">Отправить</button>
+                    <button class="btn">Отмена</button>
+                </div>
+            </form>
+        </div>
         <script src="js/script.js"></script>
     </body>
 </html>

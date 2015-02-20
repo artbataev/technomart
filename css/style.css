@@ -279,10 +279,11 @@ body {
   left: 18px;
   content: "\1f50d";
 }
-.header-search input[type="search"] {
+.header-search input[type="text"] {
   font-family: inherit;
   font-size: 17px;
   line-height: 18px;
+  box-sizing: border-box;
   width: 270px;
   height: 42px;
   margin: 0;
@@ -293,10 +294,10 @@ body {
   outline: 0;
   background: #293449;
 }
-.header-search input[type="search"]:hover {
+.header-search input[type="text"]:hover {
   background: #212a3a;
 }
-.header-search input[type="search"]:focus {
+.header-search input[type="text"]:focus {
   color: black;
   background: white;
 }
@@ -1469,4 +1470,56 @@ body {
   font-weight: normal;
   margin-bottom: 27px;
   text-transform: uppercase;
+}
+/*-----  End of $Каталог  ------*/
+/*=======================================
+=            $Модальные окна            =
+=======================================*/
+.modal-content {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 100;
+  display: none;
+  width: 620px;
+  margin-top: 50px;
+  margin-left: -310px;
+  color: black;
+  background: white;
+  box-shadow: 0 20px 40px 0 rgba(0, 1, 1, 0.75);
+}
+.modal-content.active {
+  display: block;
+}
+.email-form {
+  font-size: 0px;
+  margin-right: 50px;
+  margin-left: 30px;
+}
+.email-form label {
+  font-family: "Cuprum", sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+  display: inline-block;
+  margin-left: 20px;
+}
+.email-form textarea,
+.email-form input {
+  padding: 0;
+  font-size: 13px;
+  line-height: 34px;
+  margin: 0;
+  border: 2px solid #d7dcde;
+  border-radius: 2px;
+  display: block;
+}
+.email-form input {
+  width: 216px;
+}
+.modal-buttons {
+  margin-right: -50px;
+  margin-left: -30px;
+  margin-top: 30px;
+  padding: 37px 82px;
+  background: #f1f1f1;
 }
