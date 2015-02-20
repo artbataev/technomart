@@ -865,36 +865,41 @@ body {
 .promo-slider-item.active {
   display: block;
 }
-.promo-slider .slider-control {
+.slider-control {
   font-size: 0;
   position: absolute;
   top: 123px;
 }
-.promo-slider .slider-control:after {
+.slider-control:after {
   font-family: "symbols-technomart";
   font-size: 45px;
   display: block;
   color: white;
 }
-.promo-slider .slider-control-prev {
+.slider-control-prev {
   left: 26px;
 }
-.promo-slider .slider-control-prev:after {
+.slider-control-prev:after {
   content: "\3c";
 }
-.promo-slider .slider-control-next {
+.slider-control-next {
   right: 20px;
 }
-.promo-slider .slider-control-next:after {
+.slider-control-next:after {
   content: "\3e";
 }
-.promo-slider .slider-toggles {
+.slider-toggles {
   font-size: 0;
   position: absolute;
   bottom: 40px;
   left: 300px;
 }
-.promo-slider .slider-toggle {
+.tgl-1,
+.tgl-2 {
+  position: absolute;
+  opacity: 0;
+}
+.slider-toggle {
   display: inline-block;
   width: 6px;
   height: 6px;
@@ -902,9 +907,19 @@ body {
   border: 2px solid white;
   border-radius: 50%;
   background: white;
+  cursor: pointer;
 }
-.promo-slider .slider-toggle.active {
+#tgl-1:checked ~ .slider-toggles label[for="tgl-1"] {
   background: #ee3643;
+}
+#tgl-2:checked ~ .slider-toggles label[for="tgl-2"] {
+  background: #ee3643;
+}
+#tgl-1:checked ~ .promo-slider-wrapper .promo-slider-item:nth-child(1) {
+  display: block;
+}
+#tgl-2:checked ~ .promo-slider-wrapper .promo-slider-item:nth-child(2) {
+  display: block;
 }
 .popular-section-heading {
   font-size: 0;
@@ -1477,9 +1492,9 @@ body {
 =======================================*/
 .modal-content {
   position: absolute;
+  z-index: 100;
   top: 0;
   left: 50%;
-  z-index: 100;
   display: none;
   width: 620px;
   margin-top: 50px;
@@ -1492,7 +1507,7 @@ body {
   display: block;
 }
 .email-form {
-  font-size: 0px;
+  font-size: 0;
   margin-right: 50px;
   margin-left: 30px;
 }
@@ -1505,21 +1520,21 @@ body {
 }
 .email-form textarea,
 .email-form input {
-  padding: 0;
   font-size: 13px;
   line-height: 34px;
+  display: block;
   margin: 0;
+  padding: 0;
   border: 2px solid #d7dcde;
   border-radius: 2px;
-  display: block;
 }
 .email-form input {
   width: 216px;
 }
 .modal-buttons {
+  margin-top: 30px;
   margin-right: -50px;
   margin-left: -30px;
-  margin-top: 30px;
   padding: 37px 82px;
   background: #f1f1f1;
 }
