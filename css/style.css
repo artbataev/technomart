@@ -214,8 +214,8 @@ body {
 }
 .header-logo a {
   font-size: 24px;
-  line-height: 26px;
   font-weight: bold;
+  line-height: 26px;
   display: inline-block;
   width: 200px;
   padding: 10px;
@@ -557,8 +557,8 @@ body {
 }
 .footer-logo a {
   font-size: 30px;
-  line-height: 30px;
   font-weight: bold;
+  line-height: 30px;
   display: inline-block;
   width: 190px;
   margin-bottom: 34px;
@@ -998,9 +998,9 @@ body {
 .index-services-list {
   position: relative;
   z-index: 10;
-  margin-top: 20px;
   float: left;
   width: 240px;
+  margin-top: 20px;
 }
 .index-services-list:after {
   position: absolute;
@@ -1025,23 +1025,23 @@ body {
 .index-services-list a {
   font-family: "Cuprum", sans-serif;
   font-size: 21px;
-  line-height: 29px;
   font-weight: bold;
-  border-top: 1px solid #405069;
-  border-bottom: 1px solid #293449;
+  line-height: 29px;
   display: inline-block;
   width: 196px;
   padding: 15px 22px;
   vertical-align: middle;
   text-decoration: none;
   color: white;
+  border-top: 1px solid #405069;
+  border-bottom: 1px solid #293449;
   background: #32425c;
 }
 .index-services-list a.active {
   color: #32425c;
-  background: white;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
+  background: white;
 }
 .service-details {
   position: relative;
@@ -1177,9 +1177,9 @@ body {
   display: none;
 }
 .breadcrumbs a {
-  color: #c1c6ce;
-  text-transform: uppercase;
   text-decoration: none;
+  text-transform: uppercase;
+  color: #c1c6ce;
 }
 .breadcrumbs a:hover {
   text-decoration: underline;
@@ -1193,8 +1193,8 @@ body {
   font-size: 0;
 }
 .main-breadcrumb:before {
-  font-size: 16px;
   font-family: "symbols-technomart";
+  font-size: 16px;
   content: "\1f3e0";
 }
 .heading-filter {
@@ -1509,45 +1509,84 @@ body {
   left: 50%;
   display: none;
   width: 620px;
-  margin-top: 50px;
+  margin-top: 100px;
   margin-left: -310px;
   color: black;
+  border-top: 7px solid #ee3643;
   background: white;
   box-shadow: 0 20px 40px 0 rgba(0, 1, 1, 0.75);
 }
 .modal-content.active {
   display: block;
 }
+.modal-content-close {
+  font-size: 0;
+  width: 21px;
+  height: 21px;
+  background: url('../img/icon-close.png');
+  float: right;
+  margin: 10px;
+}
 .email-form {
   font-size: 0;
-  margin-right: 50px;
-  margin-left: 30px;
+  margin-right: 80px;
+  margin-left: 60px;
+  margin-top: 50px;
 }
 .email-form label {
   font-family: "Cuprum", sans-serif;
   font-size: 18px;
   line-height: 18px;
   display: inline-block;
+  margin-bottom: 22px;
   margin-left: 20px;
   vertical-align: top;
 }
 .email-form textarea,
 .email-form input {
   font-size: 13px;
-  line-height: 34px;
+  line-height: 14px;
   display: block;
+  box-sizing: border-box;
   margin: 0;
-  padding: 0;
+  margin-top: 13px;
+  padding: 14px 10px;
   border: 2px solid #d7dcde;
   border-radius: 2px;
 }
 .email-form input {
-  width: 216px;
+  width: 220px;
+}
+.email-form textarea {
+  width: 460px;
+  height: 114px;
 }
 .modal-buttons {
-  margin-top: 30px;
-  margin-right: -50px;
-  margin-left: -30px;
-  padding: 37px 82px;
+  margin-top: 37px;
+  margin-right: -80px;
+  margin-left: -60px;
+  padding: 37px 80px;
   background: #f1f1f1;
+}
+.btn-modal {
+  font-size: 14px;
+  line-height: 18px;
+  box-sizing: border-box;
+  width: 220px;
+  margin: 0;
+  margin-right: 20px;
+  padding: 10px;
+  text-transform: uppercase;
+  color: black;
+  border: 0;
+  border-radius: 2px;
+  outline: 0;
+  background: white;
+}
+.btn-modal:last-child {
+  margin-right: 0;
+}
+.btn-modal-submit {
+  color: white;
+  background: #ee3643;
 }
