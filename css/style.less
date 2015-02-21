@@ -298,7 +298,6 @@ body {
     padding-left: 25px;
 
     text-align: right;
-    
     &:before {
         font-family: "symbols-technomart";
         font-weight: normal;
@@ -307,18 +306,19 @@ body {
         position: absolute;
         top: 12px;
         left: 17px;
-        opacity: 0.3;
+
+        color: rgba(255, 255, 255, 0.3);
     }
     &:hover {
         &:before {
-            opacity: 1;
+            color: white;
         }
     }
     &:active {
+        color: rgba(255, 255, 255, 0.6);
         background: #161d29;
-        opacity: 0.6;
         &:before {
-            opacity: 0.5;
+            color: rgba(255, 255, 255, 0.5);
         }
     }
     &-active {
@@ -341,7 +341,6 @@ body {
     position: relative;
 
     float: left;
-    
     &:before {
         font-family: "symbols-technomart";
         font-size: 17px;
@@ -353,10 +352,9 @@ body {
         left: 18px;
 
         content: "\1f50d";
-        color: white;
-        opacity: 0.3;
-    }
 
+        color: rgba(255, 255, 255, 0.3);
+    }
     input[type="text"] {
         font-family: inherit;
         font-size: 17px;
@@ -380,7 +378,6 @@ body {
             color: black;
             background: white;
         }
-
     }
     input[type="submit"] {
         display: none;
@@ -393,8 +390,8 @@ body {
         background: #5fbb2d;
     }
     &:active {
+        color: rgba(255, 255, 255, 0.51);
         background: #518534;
-        opacity: 0.51;
     }
 }
 
@@ -483,13 +480,15 @@ body {
     padding-left: 49px;
     &:before {
         font-family: "symbols-technomart";
+        font-size: 22px;
 
         position: absolute;
         top: 9px;
         left: 16px;
-        font-size: 22px;
-        color: #c5c5c5;
+
         content: "\2386";
+
+        color: #c5c5c5;
     }
     &:hover {
         color: #ee3643;
@@ -498,10 +497,8 @@ body {
         }
     }
     &:active {
-        color: black;
-        opacity: 0.3;
+        color: rgba(0, 0, 0, 0.3);
         &:before {
-            opacity: 1;
             color: #c5c5c5;
         }
     }
@@ -515,8 +512,7 @@ body {
         }
     }
     &:active {
-        color: black;
-        opacity: 0.3;
+        color: rgba(0, 0, 0, 0.3);
     }
 }
 
@@ -546,15 +542,15 @@ body {
         left: 16px;
 
         content: "\1f468";
+
         color: #c5c5c5;
     }
     &:hover:before {
         color: #32425c;
     }
     &:active {
-        opacity: 0.3;
+        color: rgba(0, 0, 0, 0.3);
         &:before {
-            opacity: 1;
             color: #c5c5c5;
         }
     }
@@ -571,8 +567,10 @@ body {
         position: absolute;
         top: 10px;
         right: 11px;
-        color: #c5c5c5;
+
         content: "\241b";
+
+        color: #c5c5c5;
     }
     &:hover:before {
         color: #32425c;
@@ -633,8 +631,7 @@ body {
             color: #ee3643;
         }
         &:active {
-            opacity: 0.3;
-            color: #32425c;
+            color: rgba(50, 66, 92, 0.3);
         }
     }
 }
@@ -1980,19 +1977,23 @@ body {
     }
     &-close {
         font-size: 0;
+
+        float: right;
+
         width: 21px;
         height: 21px;
-        background: url('../img/icon-close.png');
-        float: right;
         margin: 10px;
+
+        background: url("../img/icon-close.png");
     }
 }
 
 .modal-container {
+    font-size: 0;
+
+    margin-top: 33px;
     margin-right: 80px;
     margin-left: 60px;
-    margin-top: 33px;
-    font-size: 0;
 }
 
 .email-form {
@@ -2069,19 +2070,24 @@ body {
 }
 
 .modal-heading {
+    font-family: "Cuprum", sans-serif;
     font-size: 30px;
     line-height: 66px;
-    padding-left:  96px;
-    margin-bottom: 50px;
-    font-family: "Cuprum", sans-serif;
+
     position: relative;
+
+    margin-bottom: 50px;
+    padding-left: 96px;
     &:before {
         position: absolute;
         top: 0;
         left: 0;
-        content: "";
+
         width: 66px;
         height: 66px;
+
+        content: "";
+
         background: url("../img/icon-ok.png");
     }
 }

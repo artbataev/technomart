@@ -266,20 +266,20 @@ body {
   position: absolute;
   top: 12px;
   left: 17px;
-  opacity: 0.3;
+  color: rgba(255, 255, 255, 0.3);
 }
 .header-wishlist:hover:before,
 .header-cart:hover:before {
-  opacity: 1;
+  color: white;
 }
 .header-wishlist:active,
 .header-cart:active {
+  color: rgba(255, 255, 255, 0.6);
   background: #161d29;
-  opacity: 0.6;
 }
 .header-wishlist:active:before,
 .header-cart:active:before {
-  opacity: 0.5;
+  color: rgba(255, 255, 255, 0.5);
 }
 .header-wishlist-active,
 .header-cart-active {
@@ -308,8 +308,7 @@ body {
   top: 10px;
   left: 18px;
   content: "\1f50d";
-  color: white;
-  opacity: 0.3;
+  color: rgba(255, 255, 255, 0.3);
 }
 .header-search input[type="text"] {
   font-family: inherit;
@@ -343,8 +342,8 @@ body {
   background: #5fbb2d;
 }
 .header-checkout:active {
+  color: rgba(255, 255, 255, 0.51);
   background: #518534;
-  opacity: 0.51;
 }
 .header-info {
   margin-top: 47px;
@@ -409,12 +408,12 @@ body {
 }
 .btn-login:before {
   font-family: "symbols-technomart";
+  font-size: 22px;
   position: absolute;
   top: 9px;
   left: 16px;
-  font-size: 22px;
-  color: #c5c5c5;
   content: "\2386";
+  color: #c5c5c5;
 }
 .btn-login:hover {
   color: #ee3643;
@@ -423,11 +422,9 @@ body {
   color: #32425c;
 }
 .btn-login:active {
-  color: black;
-  opacity: 0.3;
+  color: rgba(0, 0, 0, 0.3);
 }
 .btn-login:active:before {
-  opacity: 1;
   color: #c5c5c5;
 }
 .btn-register:hover {
@@ -437,8 +434,7 @@ body {
   color: #32425c;
 }
 .btn-register:active {
-  color: black;
-  opacity: 0.3;
+  color: rgba(0, 0, 0, 0.3);
 }
 .btn-profile {
   position: relative;
@@ -468,10 +464,9 @@ body {
   color: #32425c;
 }
 .link-profile:active {
-  opacity: 0.3;
+  color: rgba(0, 0, 0, 0.3);
 }
 .link-profile:active:before {
-  opacity: 1;
   color: #c5c5c5;
 }
 .link-logout {
@@ -484,8 +479,8 @@ body {
   position: absolute;
   top: 10px;
   right: 11px;
-  color: #c5c5c5;
   content: "\241b";
+  color: #c5c5c5;
 }
 .link-logout:hover:before {
   color: #32425c;
@@ -533,8 +528,7 @@ body {
   color: #ee3643;
 }
 .user-links a:active {
-  opacity: 0.3;
-  color: #32425c;
+  color: rgba(50, 66, 92, 0.3);
 }
 .main-menu {
   display: block;
@@ -1600,17 +1594,17 @@ body {
 }
 .modal-content-close {
   font-size: 0;
+  float: right;
   width: 21px;
   height: 21px;
-  background: url('../img/icon-close.png');
-  float: right;
   margin: 10px;
+  background: url("../img/icon-close.png");
 }
 .modal-container {
+  font-size: 0;
+  margin-top: 33px;
   margin-right: 80px;
   margin-left: 60px;
-  margin-top: 33px;
-  font-size: 0;
 }
 .email-form {
   padding-top: 17px;
@@ -1673,19 +1667,19 @@ body {
   background: #ee3643;
 }
 .modal-heading {
+  font-family: "Cuprum", sans-serif;
   font-size: 30px;
   line-height: 66px;
-  padding-left: 96px;
-  margin-bottom: 50px;
-  font-family: "Cuprum", sans-serif;
   position: relative;
+  margin-bottom: 50px;
+  padding-left: 96px;
 }
 .modal-heading:before {
   position: absolute;
   top: 0;
   left: 0;
-  content: "";
   width: 66px;
   height: 66px;
+  content: "";
   background: url("../img/icon-ok.png");
 }
