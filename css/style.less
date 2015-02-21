@@ -937,7 +937,7 @@ body {
 
             content: "";
 
-            border: 20px solid #ffffff;
+            border: 19px solid #ffffff;
             border-left-color: #ee3643;
         }
     }
@@ -1444,14 +1444,6 @@ body {
 .breadcrumbs {
     padding-top: 19px;
     padding-bottom: 16px;
-    a {
-        &:hover {
-            text-decoration: underline;
-        }
-        &:first-child {
-            color: #c1c6ce;
-        }
-    }
     ul {
         margin: 0;
         padding: 0;
@@ -1483,12 +1475,27 @@ body {
             display: none;
         }
     }
-    a,
+    a {
+        color: #c1c6ce;
+        text-transform: uppercase;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
     span {
         text-decoration: none;
         text-transform: uppercase;
-
         color: #000000;
+    }
+}
+
+.main-breadcrumb {
+    font-size: 0;
+    &:before {
+        font-size: 16px;
+        font-family: "symbols-technomart";
+        content: "\1f3e0";
     }
 }
 

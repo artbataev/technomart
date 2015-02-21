@@ -752,7 +752,7 @@ body {
   width: 0;
   height: 0;
   content: "";
-  border: 20px solid #ffffff;
+  border: 19px solid #ffffff;
   border-left-color: #ee3643;
 }
 /*-----  End of $Сетка товаров  ------*/
@@ -1151,12 +1151,6 @@ body {
   padding-top: 19px;
   padding-bottom: 16px;
 }
-.breadcrumbs a:hover {
-  text-decoration: underline;
-}
-.breadcrumbs a:first-child {
-  color: #c1c6ce;
-}
 .breadcrumbs ul {
   margin: 0;
   padding: 0;
@@ -1182,11 +1176,26 @@ body {
 .breadcrumbs li:last-child:after {
   display: none;
 }
-.breadcrumbs a,
+.breadcrumbs a {
+  color: #c1c6ce;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
 .breadcrumbs span {
   text-decoration: none;
   text-transform: uppercase;
   color: #000000;
+}
+.main-breadcrumb {
+  font-size: 0;
+}
+.main-breadcrumb:before {
+  font-size: 16px;
+  font-family: "symbols-technomart";
+  content: "\1f3e0";
 }
 .heading-filter {
   font-size: 13px;

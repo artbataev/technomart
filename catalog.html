@@ -63,11 +63,19 @@
         <main class="inner-content">
             <div class="container clearfix">
                 <div class="breadcrumbs">
-                    <ul>
-                        <li><a href="index.html"><i class="icon-home"></i></a></li>
-                        <li><a href="#">Каталог</a></li>
-                        <li><a href="#">Инструмент</a></li>
-                        <li><span>Перфораторы</span></li>
+                    <ul xmlns:v="http://rdf.data-vocabulary.org/#">
+                        <li typeof="v:Breadcrumb">
+                            <a href="index.html" rel="v:url" property="v:title" class="main-breadcrumb">Главная</a>
+                        </li>
+                        <li typeof="v:Breadcrumb">
+                            <a href="#" rel="v:url" property="v:title">Каталог</a>
+                        </li>
+                        <li typeof="v:Breadcrumb">
+                            <a href="#" rel="v:url" property="v:title">Инструмент</a>
+                        </li>
+                        <li>
+                            <span>Перфораторы</span>
+                        </li>
                     </ul>
                 </div>
             </div>
