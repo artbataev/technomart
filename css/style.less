@@ -1905,12 +1905,15 @@ body {
     }
 }
 
-.email-form {
-    font-size: 0;
-
+.modal-container {
     margin-right: 80px;
     margin-left: 60px;
-    margin-top: 50px;
+    margin-top: 33px;
+    font-size: 0;
+}
+
+.email-form {
+    padding-top: 17px;
     label {
         font-family: "Cuprum", sans-serif;
         font-size: 18px;
@@ -1979,5 +1982,23 @@ body {
     &-submit {
         color: white;
         background: #ee3643;
+    }
+}
+
+.modal-heading {
+    font-size: 30px;
+    line-height: 66px;
+    padding-left:  96px;
+    margin-bottom: 50px;
+    font-family: "Cuprum", sans-serif;
+    position: relative;
+    &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        width: 66px;
+        height: 66px;
+        background: url("../img/icon-ok.png");
     }
 }

@@ -345,21 +345,23 @@
         </footer>
         <div class="modal-content">
             <div class="modal-content-close" title="Закрыть">Закрыть</div>
-            <form class="email-form" action="/email" method="post">
-                <label for="ef-name">Ваше имя:
-                    <input type="text" placeholder="Представьтесь, пожалуйста" id="ef-name" name="name">
-                </label>
-                <label for="ef-email">Ваш e-mail:
-                    <input type="email" placeholder="Для отправки ответа" id="ef-email" name="email">
-                </label>
-                <label for="ef-text">Текст письма:
-                    <textarea placeholder="В свободной форме" id="ef-text" name="text"></textarea>
-                </label>
-                <div class="modal-buttons">
-                    <button class="btn btn-modal btn-modal-submit" type="submit">Отправить</button>
-                    <button class="btn btn-modal">Отмена</button>
-                </div>
-            </form>
+            <div class="modal-container">
+                <form class="email-form" action="/email" method="post">
+                    <label for="ef-name">Ваше имя:
+                        <input type="text" placeholder="Представьтесь, пожалуйста" id="ef-name" name="name">
+                    </label>
+                    <label for="ef-email">Ваш e-mail:
+                        <input type="email" placeholder="Для отправки ответа" id="ef-email" name="email">
+                    </label>
+                    <label for="ef-text">Текст письма:
+                        <textarea placeholder="В свободной форме" id="ef-text" name="text"></textarea>
+                    </label>
+                    <div class="modal-buttons">
+                        <button class="btn btn-modal btn-modal-submit" type="submit">Отправить</button>
+                        <button class="btn btn-modal">Отмена</button>
+                    </div>
+                </form>
+            </div>
         </div>
         <script src="js/script.js"></script>
     </body>
