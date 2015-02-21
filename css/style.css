@@ -35,6 +35,7 @@
   width: 1em;
   margin-right: 0.2em;
   text-align: center;
+  vertical-align: top;
   text-decoration: inherit;
   text-transform: none;
   speak: none;
@@ -218,6 +219,7 @@ body {
   padding: 10px;
   padding-bottom: 6px;
   text-align: center;
+  vertical-align: top;
   text-decoration: none;
   text-transform: uppercase;
   color: white;
@@ -442,6 +444,7 @@ body {
   margin: 0;
   margin-top: 4px;
   padding: 0;
+  vertical-align: top;
 }
 .user-links li:after {
   position: absolute;
@@ -480,6 +483,7 @@ body {
   display: inline-block;
   margin: 0;
   padding: 0;
+  vertical-align: top;
 }
 .main-menu a {
   font-size: 17px;
@@ -558,6 +562,7 @@ body {
   padding: 15px;
   padding-top: 18px;
   text-align: center;
+  vertical-align: top;
   text-decoration: none;
   text-transform: uppercase;
   color: white;
@@ -644,6 +649,7 @@ body {
   margin-bottom: 20px;
   margin-left: 20px;
   text-align: center;
+  vertical-align: top;
   border: 1px solid #e5e5e5;
 }
 .catalog-item-image {
@@ -904,10 +910,11 @@ body {
   width: 6px;
   height: 6px;
   margin-right: 10px;
+  cursor: pointer;
+  vertical-align: top;
   border: 2px solid white;
   border-radius: 50%;
   background: white;
-  cursor: pointer;
 }
 #tgl-1:checked ~ .slider-toggles label[for="tgl-1"] {
   background: #ee3643;
@@ -937,6 +944,7 @@ body {
   width: 634px;
   margin: 0;
   padding: 0;
+  vertical-align: top;
   text-transform: uppercase;
 }
 .popular-section-box {
@@ -944,6 +952,7 @@ body {
   margin-left: -20px;
 }
 .popular-item-manufacturer {
+  line-height: 143px;
   display: inline-block;
   width: 218px;
   height: 143px;
@@ -955,13 +964,6 @@ body {
 }
 .popular-item-manufacturer img {
   display: inline-block;
-  vertical-align: middle;
-}
-.popular-item-manufacturer:after {
-  display: inline-block;
-  width: 0;
-  height: 100%;
-  content: "";
   vertical-align: middle;
 }
 .popular-item-manufacturer:hover {
@@ -1138,6 +1140,7 @@ body {
   width: 25px;
   height: 2px;
   content: "";
+  vertical-align: top;
   background: #fb565a;
 }
 /*-----  End of $Главная  ------*/
@@ -1189,10 +1192,9 @@ body {
   font-size: 13px;
   line-height: 18px;
   margin-bottom: 20px;
-  padding: 9px 18px;
+  padding: 10px 19px;
   text-align: right;
   text-transform: uppercase;
-  border: 1px solid #f7f3ec;
   border-radius: 2px;
   background: #f7f3ec;
 }
@@ -1443,6 +1445,7 @@ body {
   display: inline-block;
   margin-right: 11px;
   padding: 0;
+  vertical-align: top;
 }
 .catalog-pagination a,
 .catalog-pagination span {
@@ -1517,6 +1520,7 @@ body {
   line-height: 18px;
   display: inline-block;
   margin-left: 20px;
+  vertical-align: top;
 }
 .email-form textarea,
 .email-form input {
