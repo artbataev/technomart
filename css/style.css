@@ -1503,7 +1503,7 @@ body {
 =            $Модальные окна            =
 =======================================*/
 .modal-content {
-  position: absolute;
+  position: fixed;
   z-index: 100;
   top: 0;
   left: 50%;

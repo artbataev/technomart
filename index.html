@@ -142,7 +142,7 @@
                     <div class="popular-section-box">
                         <div class="catalog-item">
                             <div class="catalog-item-actions">
-                                <a href="#" class="btn-buy">Купить</a>
+                                <a href="#" class="btn-buy js-addtocart">Купить</a>
                                 <a href="#" class="bookmark">В закладки</a>
                             </div>
                             <div class="catalog-item-image">
@@ -154,7 +154,7 @@
                         </div>
                         <div class="catalog-item">
                             <div class="catalog-item-actions">
-                                <a href="#" class="btn-buy">Купить</a>
+                                <a href="#" class="btn-buy js-addtocart">Купить</a>
                                 <a href="#" class="bookmark">В закладки</a>
                             </div>
                             <div class="catalog-item-image">
@@ -166,7 +166,7 @@
                         </div>
                         <div class="catalog-item">
                             <div class="catalog-item-actions">
-                                <a href="#" class="btn-buy">Купить</a>
+                                <a href="#" class="btn-buy js-addtocart">Купить</a>
                                 <a href="#" class="bookmark">В закладки</a>
                             </div>
                             <div class="catalog-item-image">
@@ -179,7 +179,7 @@
                         <div class="catalog-item">
                             <div class="flag flag-new">новинка</div>
                             <div class="catalog-item-actions">
-                                <a href="#" class="btn-buy">Купить</a>
+                                <a href="#" class="btn-buy js-addtocart">Купить</a>
                                 <a href="#" class="bookmark">В закладки</a>
                             </div>
                             <div class="catalog-item-image">
@@ -285,7 +285,7 @@
                     <p>Вы можете забрать товар сами, <br>
                     заехав в наш офис: </p>
                     <img src="img/img-map.jpg" width="300" height="158" alt="Схема проезда">
-                    <a href="#" class="btn btn-nav">Заблудились? Напишите нам!</a>
+                    <a href="#" class="btn btn-nav js-email">Заблудились? Напишите нам!</a>
                 </div>
             </div>
         </section>
@@ -343,7 +343,7 @@
                 </div>
             </div>
         </footer>
-        <div class="modal-content">
+        <div class="modal-content modal-content-email">
             <div class="modal-content-close" title="Закрыть">Закрыть</div>
             <div class="modal-container">
                 <form class="email-form" action="/email" method="post">
@@ -362,6 +362,18 @@
                     </div>
                 </form>
             </div>
+        </div>
+        <div class="modal-content modal-content-addtocart">
+            <div class="modal-content-close" title="Закрыть">Закрыть</div>
+            <div class="modal-container">
+                <div class="modal-heading modal-heading-ok">
+                    Товар добавлен в корзину!
+                </div>
+                <div class="modal-buttons">
+                    <button class="btn btn-modal btn-modal-submit" type="submit">Оформить заказ</button>
+                    <button class="btn btn-modal">Продолжить покупки</button>
+                </div>
+            </form>
         </div>
         <script src="js/script.js"></script>
     </body>
