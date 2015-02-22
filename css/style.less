@@ -156,9 +156,9 @@ body {
     margin: 0;
     padding: 0;
     // opacity: 0.5;
-    // color: black;
+    color: black;
     // background: url("../technomart-index.jpg") no-repeat center top;
-    // // background: url("../technomart-catalog.jpg") no-repeat center top;
+    // background: url("../technomart-catalog.jpg") no-repeat center top;
 
     background-color: white;
     background-repeat: no-repeat;
@@ -736,12 +736,14 @@ body {
             }
             &:active {
                 text-decoration: none;
+
+                opacity: 0.5;
             }
         }
         &-general {
             margin-top: 42px;
             a {
-                color: white;
+                color: #f1f5f7;
             }
         }
         &-content {
@@ -820,6 +822,11 @@ body {
         color: #ffd180;
         &:hover {
             text-decoration: underline;
+        }
+        &:active {
+            text-decoration: none;
+
+            color: #ee3643;
         }
     }
 }
@@ -1318,6 +1325,7 @@ body {
         box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
     }
     &:active {
+        opacity: 0.3;
         box-shadow: 0 4px 10px 0 rgba(41, 52, 73, 0.5);
     }
 }
@@ -1397,6 +1405,9 @@ body {
             border-top: 1px solid #405069;
             border-bottom: 1px solid #293449;
             background: #32425c;
+            &:hover {
+                background: #293449;
+            }
             &.active {
                 color: #32425c;
                 border-top: 1px solid white;
@@ -1539,8 +1550,8 @@ body {
 ================================*/
 
 .breadcrumbs {
-    padding-top: 19px;
-    padding-bottom: 16px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     ul {
         margin: 0;
         padding: 0;
@@ -1630,7 +1641,7 @@ body {
             vertical-align: top;
             text-decoration: none;
 
-            color: #c6c2bd;
+            color: rgba(0, 0, 0, 0.3);
             border-bottom: 1px dotted #ee3643;
             &:hover {
                 color: black;
@@ -1731,6 +1742,13 @@ body {
         }
         &:hover:before {
             color: #b5b5b5;
+        }
+    }
+    input[type="checkbox"]:disabled + label,
+    input[type="radio"]:disabled + label {
+        color: rgba(0, 0, 0, 0.4);
+        &:before {
+            color: rgba(181, 181, 181, 0.3);
         }
     }
     input[type="radio"] + label:before {
@@ -1924,24 +1942,25 @@ body {
 
         vertical-align: top;
         text-transform: uppercase;
-
-        border-radius: 2px;
     }
     a {
         text-decoration: none;
 
         color: #000000;
         border: 1px solid #e5e5e5;
+        border-radius: 2px;
         background: #ffffff;
-        &:hover,
+        &:hover {
+            border: 1px solid #bdc6ca;
+        }
         &:active {
             border: 1px solid #ee3643;
-            border-bottom: 2px solid #ee3543;
         }
     }
     .active {
         color: white;
         border: 1px solid #ee3643;
+        border-radius: 2px;
         background: #ee3643;
     }
     .next {
@@ -1952,7 +1971,7 @@ body {
 
 .description-catalog-page {
     padding-top: 45px;
-    padding-bottom: 55px;
+    padding-bottom: 56px;
 
     background: #f2f6f8;
     h2 {
