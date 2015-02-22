@@ -774,14 +774,31 @@ body {
   text-transform: uppercase;
   color: white;
   border: 3px solid #63a63e;
-  border-bottom-color: #367315;
   border-radius: 2px;
-  background-color: #63a63e;
+}
+.catalog-item-actions .btn-buy {
+  border-bottom-color: #367315;
+  background: #63a63e;
+}
+.catalog-item-actions .btn-buy:hover {
+  border-color: #5fbb2d;
+  border-bottom-color: #367315;
+  background: #5fbb2d;
+}
+.catalog-item-actions .btn-buy:active {
+  border-color: #518534;
+  background: #518534;
 }
 .catalog-item-actions .bookmark {
   color: #32425c;
-  border-bottom-color: #63a63e;
   background: white;
+}
+.catalog-item-actions .bookmark:hover {
+  border-color: #32425c;
+}
+.catalog-item-actions .bookmark:active {
+  opacity: 0.3;
+  border-color: #32425c;
 }
 .catalog-item-actions {
   display: none;
@@ -893,7 +910,7 @@ body {
 .promo-block .flag-new {
   background: url("../img/bg-flag-new.png") no-repeat 0 0;
 }
-.promo-block .promo-block-btn {
+.promo-block-btn {
   font-size: 14px;
   font-weight: normal;
   line-height: 18px;
@@ -905,11 +922,11 @@ body {
   border-radius: 2px;
   background: rgba(0, 0, 0, 0.1);
 }
-.promo-block .promo-block-btn:hover {
-  background: rgba(0, 0, 0, 0.3);
-}
-.promo-block .promo-block-btn:active {
+.promo-block-btn:hover {
   background: rgba(0, 0, 0, 0.2);
+}
+.promo-block-btn:active {
+  background: rgba(0, 0, 0, 0.3);
 }
 .promo-slider {
   position: relative;

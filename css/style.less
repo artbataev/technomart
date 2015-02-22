@@ -958,14 +958,31 @@ body {
 
             color: white;
             border: 3px solid #63a63e;
-            border-bottom-color: #367315;
             border-radius: 2px;
-            background-color: #63a63e;
+        }
+        .btn-buy {
+            border-bottom-color: #367315;
+            background: #63a63e;
+            &:hover {
+                border-color: #5fbb2d;
+                border-bottom-color: #367315;
+                background: #5fbb2d;
+            }
+            &:active {
+                border-color: #518534;
+                background: #518534;
+            }
         }
         .bookmark {
             color: #32425c;
-            border-bottom-color: #63a63e;
             background: white;
+            &:hover {
+                border-color: #32425c;
+            }
+            &:active {
+                opacity: 0.3;
+                border-color: #32425c;
+            }
         }
     }
     &-actions {
@@ -1027,6 +1044,9 @@ body {
 }
 
 /*-----  End of $Сетка товаров  ------*/
+
+
+
 
 
 
@@ -1105,7 +1125,7 @@ body {
     .flag-new {
         background: url("../img/bg-flag-new.png") no-repeat 0 0;
     }
-    .promo-block-btn {
+    &-btn {
         font-size: 14px;
         font-weight: normal;
         line-height: 18px;
@@ -1120,10 +1140,10 @@ body {
         border-radius: 2px;
         background: rgba(0, 0, 0, 0.1);
         &:hover {
-            background: rgba(0, 0, 0, 0.3);
+            background: rgba(0, 0, 0, 0.2);
         }
         &:active {
-            background: rgba(0, 0, 0, 0.2);
+            background: rgba(0, 0, 0, 0.3);
         }
     }
 }
