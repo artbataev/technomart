@@ -3,6 +3,7 @@
 ===================================*/
 /**
 *
+* Сборка проекта
 * Содержание
 * Иконочные шрифты
 * Общие стили
@@ -18,6 +19,19 @@
 
 // font-family: 'Cuprum', sans-serif;
 // font-family: 'PT Sans', sans-serif;
+
+
+
+/*=======================================
+=            $Сборка проекта            =
+=======================================*/
+@import "normalize";
+
+/*-----  End of $Сборка проекта  ------*/
+
+
+
+
 
 /*=========================================
 =            $Иконочные шрифты            =
@@ -45,9 +59,8 @@
     font-variant: normal;
 
     display: inline-block;
-
-    width: 1em;
-    margin-right: 0.2em;
+    // width: 1em;
+    // margin-right: 0.2em;
 
     text-align: center;
     vertical-align: top;
@@ -217,6 +230,7 @@ body {
 
 
 
+
 /*===============================
 =            $Header            =
 ===============================*/
@@ -341,21 +355,16 @@ body {
     position: relative;
 
     float: left;
-    &:before {
-        font-family: "symbols-technomart";
+    .icon-search {
         font-size: 17px;
-        font-weight: normal;
-        font-style: normal;
 
         position: absolute;
-        top: 10px;
-        left: 18px;
-
-        content: "\1f50d";
+        top: 9px;
+        left: 17px;
 
         color: rgba(255, 255, 255, 0.3);
     }
-    input[type="text"] {
+    &-text {
         font-family: inherit;
         font-size: 17px;
         line-height: 18px;
@@ -365,18 +374,25 @@ body {
         height: 42px;
         margin: 0;
         padding: 0;
-        padding-left: 42px;
+        padding-left: 46px;
 
         color: white;
         border: 0;
+        border-left: 2px solid #293449;
         outline: 0;
         background: #293449;
         &:hover {
             background: #212a3a;
+            & + .icon-search {
+                color: white;
+            }
         }
         &:focus {
             color: black;
             background: white;
+            & + .icon-search {
+                color: #ee3643;
+            }
         }
     }
     input[type="submit"] {
@@ -685,6 +701,7 @@ body {
 
 
 
+
 /*===============================
 =            $Footer            =
 ===============================*/
@@ -841,6 +858,7 @@ body {
     float: left;
 
     width: 223px;
+    margin-top: -2px;
 
     text-align: right;
 }
@@ -848,13 +866,14 @@ body {
 
 .social-btn {
     font-size: 18px;
-    line-height: 41px;
+    line-height: 42px;
 
     display: inline-block;
 
-    width: 41px;
-    height: 41px;
-    margin: 0 1px;
+    width: 42px;
+    height: 42px;
+    margin-right: 2px;
+    margin-left: 1px;
 
     text-align: center;
     vertical-align: top;
@@ -903,7 +922,8 @@ body {
 
     display: inline-block;
 
-    width: 218px;
+    box-sizing: border-box; // для правильного масштабирования
+    width: 220px;
     margin-bottom: 20px;
     margin-left: 20px;
 
@@ -942,68 +962,10 @@ body {
         left: 0;
 
         width: 218px;
-        height: 88px;
-        padding: 43px 0;
+        height: 86px;
+        padding: 45px 0;
 
         background-color: #ffffff;
-        .btn-buy,
-        .bookmark {
-            font-family: "Cuprum", sans-serif;
-            font-size: 14px;
-            font-weight: normal;
-            line-height: 18px;
-
-            display: block;
-
-            width: 129px;
-            margin: 0 auto;
-            margin-bottom: 7px;
-            padding: 7px 0;
-
-            text-decoration: none;
-            text-transform: uppercase;
-
-            color: white;
-            border: 3px solid #63a63e;
-            border-radius: 2px;
-        }
-        .btn-buy {
-            position: relative;
-
-            border-bottom-color: #367315;
-            background: #63a63e;
-            &:before {
-                font-family: "symbols-technomart";
-                font-size: 17px;
-                line-height: 18px;
-
-                position: absolute;
-                top: 7px;
-                left: 15px;
-
-                content: "\62";
-            }
-            &:hover {
-                border-color: #5fbb2d;
-                border-bottom-color: #367315;
-                background: #5fbb2d;
-            }
-            &:active {
-                border-color: #518534;
-                background: #518534;
-            }
-        }
-        .bookmark {
-            color: #32425c;
-            background: white;
-            &:hover {
-                border-color: #32425c;
-            }
-            &:active {
-                opacity: 0.3;
-                border-color: #32425c;
-            }
-        }
     }
     &-actions {
         display: none;
@@ -1025,6 +987,7 @@ body {
         margin-top: 10px;
         margin-bottom: 7px;
 
+        cursor: pointer;
         text-decoration: line-through;
         text-transform: uppercase;
 
@@ -1042,6 +1005,7 @@ body {
         padding-bottom: 7px;
         padding-left: 30px;
 
+        cursor: pointer;
         text-transform: uppercase;
 
         color: white;
@@ -1060,6 +1024,77 @@ body {
             border: 19px solid #ffffff;
             border-left-color: #ee3643;
         }
+    }
+}
+
+.btn-buy,
+.bookmark {
+    font-family: "Cuprum", sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 18px;
+
+    display: block;
+
+    width: 129px;
+    margin: 0 auto;
+    margin-bottom: 7px;
+    padding: 7px 0;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: white;
+    border: 3px solid #63a63e;
+    border-radius: 2px;
+}
+
+.btn-buy {
+    position: relative;
+
+    border-bottom-color: #367315;
+    background: #63a63e;
+    &:before {
+        font-family: "symbols-technomart";
+        font-size: 17px;
+        font-weight: normal;
+        font-style: normal;
+        line-height: 18px;
+
+        position: absolute;
+        top: 7px;
+        left: 11px;
+
+        content: "\62";
+        text-transform: none;
+
+        color: rgba(255, 255, 255, 0.3);
+    }
+    &:hover {
+        border-color: #5fbb2d;
+        border-bottom-color: #367315;
+        background: #5fbb2d;
+        &:before {
+            color: white;
+        }
+    }
+    &:active {
+        border-color: #518534;
+        background: #518534;
+        &:before {
+            color: white;
+        }
+    }
+}
+.bookmark {
+    color: #32425c;
+    background: white;
+    &:hover {
+        border-color: #32425c;
+    }
+    &:active {
+        opacity: 0.3;
+        border-color: #32425c;
     }
 }
 
@@ -1090,44 +1125,43 @@ body {
 
     position: relative;
 
-    width: 278px;
-    height: 101px;
+    width: 158px;
     margin-bottom: 20px;
-    padding-top: 22px;
-    padding-left: 22px;
+    padding: 22px;
+    padding-right: 120px;
 
     color: white;
     &-heading {
-        margin-bottom: 12px;
+        margin-bottom: 11px;
     }
     &-materials {
         float: left;
 
         margin-right: 20px;
 
-        background: #f6b22d url("../img/icon-materials.png") no-repeat 213px 30px;
+        background: #f6b22d url("../img/icons-promo.png") no-repeat right top;
     }
     &-instrument {
         float: left;
 
         margin-right: 20px;
 
-        background: #4aafde url("../img/icon-instrument.png") no-repeat 197px 33px;
+        background: #4aafde url("../img/icons-promo.png") no-repeat right -123px;
     }
     &-tech {
         float: right;
 
-        background: #cc79d1 url("../img/icon-techno.png") no-repeat 191px 30px;
+        background: #cc79d1 url("../img/icons-promo.png") no-repeat right -246px;
     }
     &-sales {
         float: right;
 
-        background: #85d179 url("../img/icon-sales.png") no-repeat 196px 26px;
+        background: #85d179 url("../img/icons-promo.png") no-repeat right -369px;
     }
     &-delivery {
         float: right;
 
-        background: #f6b22d url("../img/icon-delivery.png") no-repeat 190px 33px;
+        background: #f6b22d url("../img/icons-promo.png") no-repeat right -492px;
     }
     .flag {
         position: absolute;
@@ -1175,6 +1209,7 @@ body {
 
     width: 620px;
     height: 265px;
+    margin-bottom: 20px;
     &-caption {
         font-family: "Cuprum", sans-serif;
 
@@ -1286,26 +1321,27 @@ body {
     &-heading {
         font-size: 0;
 
-        margin-bottom: 18px;
+        margin-bottom: 19px;
         padding: 25px 28px;
         padding-right: 0;
 
         background: #f7f3ec;
-        h2 {
-            font-family: "Cuprum", sans-serif;
-            font-size: 30px;
-            font-weight: normal;
-            line-height: 40px;
+    }
+    &-name {
+        font-family: "Cuprum", sans-serif;
+        font-size: 30px;
+        font-weight: normal;
+        line-height: 40px;
 
-            display: inline-block;
+        display: inline-block;
 
-            width: 634px;
-            margin: 0;
-            padding: 0;
+        width: 600px;
+        margin: 0;
+        padding: 0;
+        padding-right: 34px;
 
-            vertical-align: top;
-            text-transform: uppercase;
-        }
+        vertical-align: top;
+        text-transform: uppercase;
     }
     &-box {
         font-size: 0;
@@ -1320,8 +1356,9 @@ body {
 
     display: inline-block;
 
-    width: 218px;
-    height: 143px;
+    box-sizing: border-box; // для правильного масштабирования
+    width: 220px;
+    height: 145px;
     margin-bottom: 20px;
     margin-left: 20px;
 
@@ -1346,8 +1383,7 @@ body {
 .index-services {
     position: relative;
 
-    padding-top: 50px;
-    padding-bottom: 60px;
+    padding-top: 45px;
 
     background: #f2f6f8;
     h2,
@@ -1355,16 +1391,16 @@ body {
         font-family: "Cuprum", sans-serif;
         font-size: 30px;
         font-weight: normal;
+        line-height: 33px;
 
         margin: 0;
-        margin-bottom: 29px;
+        margin-bottom: 23px;
 
         text-transform: uppercase;
     }
     h3 {
         font-size: 36px;
-
-        margin-bottom: 30px;
+        line-height: 40px;
 
         color: #32425c;
     }
@@ -1437,42 +1473,37 @@ body {
     display: none;
     float: left;
 
-    width: 540px;
-    height: 222px;
-    padding-top: 74px;
-    padding-right: 80px;
-    padding-bottom: 0;
+    width: 320px;
+    min-height: 222px;
+    padding-top: 66px;
+    padding-right: 300px;
+    padding-bottom: 66px;
     padding-left: 80px;
-    &:after {
-        position: absolute;
-        top: 92px;
-        right: 0;
-
-        display: block;
-
-        width: 468px;
-        height: 261px;
-
-        content: "";
+    p {
+        margin-top: 0;
+        margin-bottom: 30px;
     }
     &.active {
         display: block;
     }
-    &-delivery:after {
-        background: url("../img/img-services-delivery.png") no-repeat right top;
+    &-delivery {
+        background: url("../img/img-services-delivery.png") no-repeat right 92px;
     }
-    &-guarantee:after {
-        background: url("../img/img-services-guarantee.png") no-repeat right top;
+    &-guarantee {
+        background: url("../img/img-services-guarantee.png") no-repeat right 92px;
     }
-    &-credit:after {
-        background: url("../img/img-services-credit.png") no-repeat right top;
+    &-credit {
+        background: url("../img/img-services-credit.png") no-repeat right 92px;
+        .btn-nav {
+            width: 129px;
+        }
     }
 }
 
 
 .company-info {
     padding-top: 82px;
-    padding-bottom: 85px;
+    padding-bottom: 86px;
     &-description,
     &-contacts {
         float: left;
@@ -1497,13 +1528,13 @@ body {
             width: 234px;
         }
     }
-    h2 {
+    &-heading {
         font-family: "Cuprum", sans-serif;
         font-size: 30px;
         font-weight: normal;
 
         margin: 0;
-        margin-bottom: 28px;
+        margin-bottom: 29px;
 
         text-transform: uppercase;
     }
@@ -1563,8 +1594,8 @@ body {
 ================================*/
 
 .breadcrumbs {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 16px;
+    padding-bottom: 14px;
     ul {
         margin: 0;
         padding: 0;
@@ -1582,7 +1613,7 @@ body {
             font-size: 14px;
             font-weight: normal;
             font-style: normal;
-            line-height: 14px;
+            line-height: 16px;
 
             position: absolute;
             top: 0;
@@ -1625,10 +1656,13 @@ body {
 
 .heading-filter {
     font-size: 13px;
-    line-height: 18px;
+    line-height: 13px;
 
     margin-bottom: 20px;
-    padding: 10px 19px;
+    padding-top: 13px;
+    padding-right: 19px;
+    padding-bottom: 12px;
+    padding-left: 19px;
 
     text-align: right;
     text-transform: uppercase;
@@ -1641,10 +1675,9 @@ body {
     &-sort {
         width: 664px;
         margin-left: 20px;
-        padding-bottom: 5px;
+        padding-bottom: 8px;
         &-link {
             font-size: 13px;
-            line-height: 18px;
 
             display: inline-block;
 
@@ -1680,7 +1713,7 @@ body {
             &:before {
                 font-family: "symbols-technomart";
                 font-size: 23px;
-                line-height: 18px;
+                line-height: 13px;
 
                 display: inline-block;
 
@@ -1785,10 +1818,11 @@ body {
 
     display: inline-block;
 
+    box-sizing: border-box;
     width: 140px;
-    height: 36px;
+    height: 38px;
     margin: 0;
-    margin-top: 55px;
+    margin-top: 57px;
     padding: 0 10px;
 
     text-align: center;
@@ -1799,16 +1833,17 @@ body {
     border: 1px solid #e5e5e5;
     border-radius: 2px;
     background: white;
-    &:hover,
+    &:hover {
+        border: 1px solid #bdc6ca;
+    }
     &:active {
         border: 1px solid #ee3643;
-        border-bottom: 2px solid #ee3543;
     }
 }
 
 .filter-block {
     margin: 0;
-    margin-bottom: 24px;
+    margin-bottom: 23px;
     padding: 0;
     padding-top: 25px;
 
@@ -1907,7 +1942,7 @@ body {
 
 .catalog-products {
     margin-bottom: 60px;
-    h1 {
+    &-heading {
         font-family: "Cuprum", sans-serif;
         font-size: 30px;
         font-weight: normal;
@@ -1983,16 +2018,18 @@ body {
 }
 
 .description-catalog-page {
-    padding-top: 45px;
-    padding-bottom: 56px;
+    padding-top: 64px;
+    padding-bottom: 54px;
 
     background: #f2f6f8;
-    h2 {
+    &-heading {
         font-family: "Cuprum", sans-serif;
         font-size: 30px;
         font-weight: normal;
+        line-height: 33px;
 
-        margin-bottom: 27px;
+        margin-top: 0;
+        margin-bottom: 25px;
 
         text-transform: uppercase;
     }
@@ -2003,9 +2040,19 @@ body {
 
 
 
+
+
 /*=======================================
 =            $Модальные окна            =
 =======================================*/
+
+.modal-container {
+    font-size: 0;
+
+    margin-top: 33px;
+    margin-right: 80px;
+    margin-left: 60px;
+}
 
 .modal-content {
     position: fixed;
@@ -2017,7 +2064,7 @@ body {
     // display: block;
 
     width: 620px;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-left: -310px;
 
     color: black;
@@ -2030,22 +2077,30 @@ body {
     &-close {
         font-size: 0;
 
-        float: right;
+        position: absolute;
+        z-index: 200;
+        top: 10px;
+        right: 9px;
 
         width: 21px;
         height: 21px;
-        margin: 10px;
 
         background: url("../img/icon-close.png");
     }
-}
+    &-map {
+        width: 940px;
+        height: 446px;
+        margin-left: -470px;
 
-.modal-container {
-    font-size: 0;
-
-    margin-top: 33px;
-    margin-right: 80px;
-    margin-left: 60px;
+        border: 0;
+        box-shadow: 0 0 14.72px 1.28px rgba(35, 31, 32, 0.5);
+        .modal-container {
+            margin: 0;
+        }
+        .modal-content-close {
+            top: 40px; // чтобы Яндекс-карта выглядела нормально
+        }
+    }
 }
 
 .email-form {

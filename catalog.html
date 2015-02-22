@@ -15,7 +15,9 @@
                         <a href="index.html">Техномарт</a>
                     </div>
                     <form class="header-search" action="/search" method="get">
-                        <input type="text" name="q" placeholder="Поиск">
+                        <input class="header-search-text" type="text" name="q" placeholder="Поиск">
+                        <!-- search не поддается стилизации в Safari -->
+                        <i class="icon-search"></i>
                         <input type="submit">
                     </form>
                     <a href="#" class="header-wishlist">Закладки: 0</a>
@@ -81,7 +83,7 @@
             </div>
             <section class="catalog-products">
                 <div class="container clearfix">
-                    <h1>Перфораторы</h1>
+                    <h1 class="catalog-products-heading">Перфораторы</h1>
                     <div class="catalog-filter">
                         <div class="heading-filter clearfix">
                             <div class="heading-filter-title">Фильтр:</div>
@@ -272,7 +274,7 @@
             </section>
             <section class="description-catalog-page">
                 <div class="container clearfix">
-                    <h2>Пара слов о перфораторах</h2>
+                    <h2 class="description-catalog-page-heading">Пара слов о перфораторах</h2>
                     <p>
                         Перфоратор &mdash; универсальный строительный инструмент. 
                         Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. 
@@ -345,11 +347,11 @@
                     Товар добавлен в корзину!
                 </div>
                 <div class="modal-buttons">
-                    <a href="#" class="btn btn-modal btn-modal-submit" type="submit">Оформить заказ</a>
+                    <a href="#" class="btn btn-modal btn-modal-submit">Оформить заказ</a>
                     <a href="#" class="btn btn-modal btn-modal-cancel">Продолжить покупки</a>
                 </div>
-            </form>
+            </div>
         </div>
-        <script src="js/script.js"></script>
+        <script src="js/script.min.js"></script>
     </body>
 </html>

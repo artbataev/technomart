@@ -22,6 +22,11 @@ for (i = 0; i < links.length; i++) {
     })
 }
 
+
+
+
+
+// Модальное окно - отправка письма
 var emailLink = document.querySelector(".js-email"); 
 if(emailLink) {
     var emailPopup = document.querySelector(".modal-content-email"); 
@@ -45,10 +50,44 @@ if(emailLink) {
     });
 }
 
+
+
+
+
+// Модальное окно - карта
+var mapLink = document.querySelector(".js-map"); 
+if(mapLink) {
+    var mapPopup = document.querySelector(".modal-content-map"); 
+    var mapClose = mapPopup.querySelector(".modal-content-close"); 
+    mapLink.addEventListener("click", function(event) { 
+        event.preventDefault(); 
+        mapPopup.classList.add("active"); 
+    }); 
+
+    mapClose.addEventListener("click", function(event) {
+        event.preventDefault();
+        mapPopup.classList.remove("active");
+    });
+
+    window.addEventListener("keydown", function(event) {
+        if (event.keyCode == 27) { 
+            if (mapPopup.classList.contains("active")) { 
+                mapPopup.classList.remove("active"); 
+            } 
+        }
+    });
+}
+
+
+
+
+
+// Модальное окно - товар добавлен в корзину
 var addToCartLinks = document.querySelectorAll(".js-addtocart");
 if(addToCartLinks) {
     var addToCartPopup = document.querySelector(".modal-content-addtocart"); 
     var addToCartClose = addToCartPopup.querySelector(".modal-content-close"); 
+    var addToCartCloseBtn = addToCartPopup.querySelector(".btn-modal-cancel"); 
     for (var j = 0; j < addToCartLinks.length; j++) {
         addToCartLinks[j].addEventListener("click", function(event) {
             event.preventDefault();
@@ -57,6 +96,11 @@ if(addToCartLinks) {
     }
 
     addToCartClose.addEventListener("click", function(event) {
+        event.preventDefault();
+        addToCartPopup.classList.remove("active");
+    });
+
+    addToCartCloseBtn.addEventListener("click", function(event) {
         event.preventDefault();
         addToCartPopup.classList.remove("active");
     });
