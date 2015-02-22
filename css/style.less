@@ -156,10 +156,10 @@ body {
     margin: 0;
     padding: 0;
     // opacity: 0.5;
+
     color: black;
     // background: url("../technomart-index.jpg") no-repeat center top;
     // background: url("../technomart-catalog.jpg") no-repeat center top;
-
     background-color: white;
     background-repeat: no-repeat;
     background-position: center top;
@@ -968,8 +968,21 @@ body {
             border-radius: 2px;
         }
         .btn-buy {
+            position: relative;
+
             border-bottom-color: #367315;
             background: #63a63e;
+            &:before {
+                font-family: "symbols-technomart";
+                font-size: 17px;
+                line-height: 18px;
+
+                position: absolute;
+                top: 7px;
+                left: 15px;
+
+                content: "\62";
+            }
             &:hover {
                 border-color: #5fbb2d;
                 border-bottom-color: #367315;
@@ -2105,6 +2118,21 @@ body {
     &-submit {
         color: white;
         background: #ee3643;
+        &:hover {
+            background: #ca2c37;
+        }
+        &:active {
+            background: #ba2732;
+        }
+    }
+    &-cancel {
+        // как у кнопок с белым фоном, согласно styleguide
+        &:hover {
+            color: #ee3643;
+        }
+        &:active {
+            color: rgba(0, 0, 0, 0.3);
+        }
     }
 }
 
@@ -2130,3 +2158,5 @@ body {
         background: url("../img/icon-ok.png");
     }
 }
+
+/*-----  End of $Модальные окна  ------*/

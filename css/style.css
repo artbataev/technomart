@@ -783,8 +783,18 @@ body {
   border-radius: 2px;
 }
 .catalog-item-actions .btn-buy {
+  position: relative;
   border-bottom-color: #367315;
   background: #63a63e;
+}
+.catalog-item-actions .btn-buy:before {
+  font-family: "symbols-technomart";
+  font-size: 17px;
+  line-height: 18px;
+  position: absolute;
+  top: 7px;
+  left: 15px;
+  content: "\62";
 }
 .catalog-item-actions .btn-buy:hover {
   border-color: #5fbb2d;
@@ -1702,6 +1712,18 @@ body {
 .btn-modal-submit {
   color: white;
   background: #ee3643;
+}
+.btn-modal-submit:hover {
+  background: #ca2c37;
+}
+.btn-modal-submit:active {
+  background: #ba2732;
+}
+.btn-modal-cancel:hover {
+  color: #ee3643;
+}
+.btn-modal-cancel:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 .modal-heading {
   font-family: "Cuprum", sans-serif;
