@@ -2084,6 +2084,7 @@ body {
 
         width: 21px;
         height: 21px;
+        cursor: pointer;
 
         background: url("../img/icon-close.png");
     }
@@ -2101,6 +2102,13 @@ body {
             top: 40px; // чтобы Яндекс-карта выглядела нормально
         }
     }
+}
+
+.modal-map {
+    width: 940px;
+    height: 446px;
+    margin: 0;
+    padding: 0;
 }
 
 .email-form {
@@ -2212,6 +2220,20 @@ body {
 
         background: url("../img/icon-ok.png");
     }
+}
+
+@keyframes shake {
+    from { transform: translateX(0px); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+    to { transform: translateX(0px); }
+}
+
+.modal-error {
+  animation-name: shake;
+  animation-duration: 0.1s;
+  animation-iteration-count: 5;
+  animation-timing-function: linear;
 }
 
 /*-----  End of $Модальные окна  ------*/

@@ -31,14 +31,54 @@ var emailLink = document.querySelector(".js-email");
 if(emailLink) {
     var emailPopup = document.querySelector(".modal-content-email"); 
     var emailClose = emailPopup.querySelector(".modal-content-close"); 
+    var emailCloseBtn = emailPopup.querySelector(".btn-modal-cancel"); 
+    var emailForm = emailPopup.querySelector("form"); 
+    var emailMail = emailPopup.querySelector("[name=email]"); 
+    var emailText = emailPopup.querySelector("[name=text]"); 
+    var emailName = emailPopup.querySelector("[name=name]"); 
+    var storageName = localStorage.getItem("name");
+    var storageEmail = localStorage.getItem("email");
+
     emailLink.addEventListener("click", function(event) { 
         event.preventDefault(); 
         emailPopup.classList.add("active"); 
+        if(storageName && storageEmail) {
+            emailName.value = storageName;
+            emailMail.value = storageEmail;
+            emailText.focus();
+        }
+        else if (storageName) {
+            emailName.value = storageName;
+            emailMail.focus();
+        }
+        else if (storageEmail) {
+            emailMail.value = storageEmail;
+            emailName.focus();
+        }
+        else {
+            emailName.focus();
+        }
     }); 
 
     emailClose.addEventListener("click", function(event) {
         event.preventDefault();
         emailPopup.classList.remove("active");
+    });
+
+    emailCloseBtn.addEventListener("click", function(event) {
+        event.preventDefault();
+        emailPopup.classList.remove("active");
+    });
+
+    emailForm.addEventListener("submit", function(event) {
+        if (!(emailMail.value && emailText.value)) {
+          event.preventDefault();
+          emailPopup.classList.add("modal-error");
+          setTimeout(function() { emailPopup.classList.remove("modal-error"); }, 1500);
+        } else {
+            localStorage.setItem("email", emailMail.value);
+            localStorage.setItem("name", emailName.value);
+        }
     });
 
     window.addEventListener("keydown", function(event) {
@@ -113,6 +153,5 @@ if(addToCartLinks) {
         }
     });
 }
-
 
 
